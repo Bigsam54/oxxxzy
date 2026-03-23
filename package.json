@@ -1,0 +1,44 @@
+{
+  "name": "oxzy-website",
+  "version": "1.0.0",
+  "description": "Official website for Oxzy — Ghana's youth innovation & entrepreneurship platform. Featuring the Young Entrepreneurs Summit, Entrepreneurs Club, and Ghana Youth Government.",
+  "author": "Oxzy Team <hello@oxzy.org>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "live-server --port=3000 --open=index.html --watch=*.html,css/*.css,js/*.js",
+    "start": "live-server --port=3000 --open=index.html",
+    "serve": "http-server . -p 3000 -o",
+    "format": "prettier --write \"*.html\" \"css/*.css\" \"js/*.js\"",
+    "lint:css": "stylelint \"css/*.css\"",
+    "validate": "html-validate \"*.html\""
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "http-server": "^14.1.1",
+    "prettier": "^3.2.5"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": true,
+    "htmlWhitespaceSensitivity": "ignore"
+  },
+  "keywords": [
+    "oxzy",
+    "ghana",
+    "youth",
+    "entrepreneurship",
+    "innovation",
+    "summit",
+    "yes",
+    "startup"
+  ],
+  "homepage": "https://oxzy.org",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oxzy/yes-website"
+  }
+}
