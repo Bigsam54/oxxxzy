@@ -18,6 +18,22 @@ window.addEventListener(
   { passive: true },
 );
 
+// Hero Entrance Sequence (Desktop only)
+document.addEventListener('DOMContentLoaded', () => {
+  if (window.innerWidth > 900) {
+    const heroContent = document.querySelector('.hero__content.stagger-container, .page-hero__content.stagger-container');
+    if (heroContent) {
+      setTimeout(() => {
+        const items = heroContent.querySelectorAll('.fade-up');
+        items.forEach((item, idx) => {
+          item.style.setProperty('--stagger-idx', idx);
+          item.classList.add('visible');
+        });
+      }, 300);
+    }
+  }
+});
+
 // Hamburger toggle
 hamburger?.addEventListener('click', () => {
   hamburger.classList.toggle('open');
@@ -45,20 +61,35 @@ document.addEventListener('click', (e) => {
 
 /* ─── Scroll Animations ─────────────────────────────── */
 const observerOptions = {
-  threshold: 0.12,
-  rootMargin: '0px 0px -40px 0px',
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px',
 };
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
+      const el = entry.target;
+      
+      // Handle staggering for children if it's a "stagger-container"
+      if (el.classList.contains('stagger-container') && window.innerWidth > 900) {
+        const items = el.querySelectorAll('.fade-up');
+        items.forEach((item, idx) => {
+          item.style.setProperty('--stagger-idx', idx);
+          item.classList.add('visible');
+        });
+      } else {
+        el.classList.add('visible');
+      }
+      
+      observer.unobserve(el);
     }
   });
 }, observerOptions);
 
-document.querySelectorAll('.fade-up').forEach((el) => observer.observe(el));
+// Observe individuals OR containers
+document.querySelectorAll('.fade-up, .stagger-container').forEach((el) => {
+  observer.observe(el);
+});
 
 /* ─── Counter Animation ─────────────────────────────── */
 function animateCounter(el, target, duration = 1800) {
