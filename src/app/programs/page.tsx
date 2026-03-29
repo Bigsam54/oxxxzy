@@ -10,38 +10,25 @@ export default function ProgramsPage() {
   return (
     <>
       {/* PAGE HERO */}
-      <section className="page-hero" aria-labelledby="programsHeroTitle">
-        <div className="page-hero__bg"></div>
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            backgroundImage:
-              "radial-gradient(circle at 50% 40%, rgba(244, 196, 48, 0.12), transparent 55%), radial-gradient(circle at 20% 60%, rgba(214, 40, 40, 0.15), transparent 45%), radial-gradient(circle at 80% 60%, rgba(46, 125, 50, 0.12), transparent 45%)",
-            zIndex: 1,
-            pointerEvents: "none",
-          }}
-        ></div>
-        <div
-          style={{
-            position: "absolute",
-            bottom: 0,
-            left: 0,
-            right: 0,
-            height: "4px",
-            background: "linear-gradient(90deg, var(--red) 0%, var(--red) 33%, var(--gold) 33%, var(--gold) 66%, var(--green) 66%)",
-            zIndex: 3,
-          }}
-        ></div>
-        <div className="container" style={{ position: "relative", zIndex: 2 }}>
+      <section className="page-hero" style={{ background: "var(--theme-cream)", paddingTop: "clamp(100px, 15vh, 140px)", minHeight: "60vh", display: "flex", alignItems: "center" }}>
+        <div className="container hero__inner" style={{ position: "relative", zIndex: 2 }}>
           <div className="page-hero__content stagger-container">
-            <span className="page-hero__label fade-up">✦ Our Programs</span>
-            <h1 className="page-hero__title fade-up" id="programsHeroTitle">
-              Our Initiatives,
-              <br />
-              <span style={{ color: "var(--gold)" }}>One Movement</span>
+            <div style={{ display: "inline-flex", alignItems: "center", gap: "10px", background: "rgba(13, 92, 51, 0.08)", color: "var(--ghana-green)", padding: "8px 20px", borderRadius: "100px", fontSize: "12px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "32px" }}>
+              <span>✦</span> Our Programs
+            </div>
+            <h1 className="hero__title" style={{ color: "var(--theme-bg)", fontWeight: 900, marginBottom: "24px" }}>
+              Our Initiatives,<br /><span style={{ color: "var(--gold)", fontStyle: "italic" }}>One Movement.</span>
             </h1>
-            <p className="page-hero__subtitle fade-up">
+            
+            {/* Mobile Image - Premium Visual */}
+            <div className="mobile-only" style={{ marginBottom: "32px", borderRadius: "24px", overflow: "hidden", boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}>
+              <img 
+                src="https://res.cloudinary.com/dv1ignqxh/image/upload/v1774705868/Whisk_73f190b50b714c186f24c5711ba088c0dr_ix7xrv.png" 
+                alt="Oxzy" 
+                style={{ width: "100%", height: "auto", display: "block" }}
+              />
+            </div>
+            <p style={{ color: "var(--theme-text-muted-dark)", fontSize: "20px", maxWidth: "600px", lineHeight: 1.7 }}>
               Eight flagship initiatives designed to empower, connect, and amplify young changemakers at every stage of their journey.
             </p>
           </div>
@@ -70,19 +57,19 @@ export default function ProgramsPage() {
               </p>
               <ul style={{ display: "flex", flexDirection: "column", gap: "12px", marginBottom: "36px" }}>
                 <li style={{ display: "flex", alignItems: "center", gap: "12px", fontSize: "0.95rem" }}>
-                  <span style={{ color: "var(--red)", fontSize: "1.1rem" }}>✓</span>
+                  <span style={{ color: "var(--theme-primary)", fontSize: "1.1rem" }}>✓</span>
                   Startup pitching &amp; investor access
                 </li>
                 <li style={{ display: "flex", alignItems: "center", gap: "12px", fontSize: "0.95rem" }}>
-                  <span style={{ color: "var(--red)", fontSize: "1.1rem" }}>✓</span>
+                  <span style={{ color: "var(--theme-primary)", fontSize: "1.1rem" }}>✓</span>
                   Expert keynotes &amp; workshops
                 </li>
                 <li style={{ display: "flex", alignItems: "center", gap: "12px", fontSize: "0.95rem" }}>
-                  <span style={{ color: "var(--red)", fontSize: "1.1rem" }}>✓</span>
+                  <span style={{ color: "var(--theme-primary)", fontSize: "1.1rem" }}>✓</span>
                   Networking &amp; exhibition
                 </li>
                 <li style={{ display: "flex", alignItems: "center", gap: "12px", fontSize: "0.95rem" }}>
-                  <span style={{ color: "var(--red)", fontSize: "1.1rem" }}>✓</span>
+                  <span style={{ color: "var(--theme-primary)", fontSize: "1.1rem" }}>✓</span>
                   Youth policy dialogue
                 </li>
               </ul>
@@ -91,7 +78,7 @@ export default function ProgramsPage() {
             <div className="fade-up">
               <div
                 style={{
-                  background: "linear-gradient(135deg, #1a0202, #6b1414)",
+                  background: "linear-gradient(135deg, #3f3561, #2a2245)",
                   borderRadius: "var(--radius-lg)",
                   padding: "48px",
                   color: "#fff",
@@ -101,6 +88,7 @@ export default function ProgramsPage() {
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "flex-end",
+                  border: "1px solid rgba(255, 255, 255, 0.1)",
                 }}
               >
                 <div
@@ -110,7 +98,7 @@ export default function ProgramsPage() {
                     right: "-40px",
                     width: "200px",
                     height: "200px",
-                    background: "rgba(244, 196, 48, 0.12)",
+                    background: "rgba(255, 255, 255, 0.05)",
                     borderRadius: "50%",
                   }}
                 ></div>
@@ -121,7 +109,7 @@ export default function ProgramsPage() {
                     left: "-40px",
                     width: "250px",
                     height: "250px",
-                    background: "rgba(214, 40, 40, 0.2)",
+                    background: "rgba(255, 255, 255, 0.03)",
                     borderRadius: "50%",
                   }}
                 ></div>
@@ -132,8 +120,8 @@ export default function ProgramsPage() {
                   <div style={{ opacity: 0.7, marginBottom: "20px" }}>Coming Soon — Accra, Ghana</div>
                   <span
                     style={{
-                      background: "var(--gold)",
-                      color: "var(--black)",
+                      background: "var(--theme-primary)",
+                      color: "var(--theme-bg)",
                       padding: "6px 16px",
                       borderRadius: "99px",
                       fontSize: "0.8rem",
@@ -174,19 +162,19 @@ export default function ProgramsPage() {
               </p>
               <ul style={{ display: "flex", flexDirection: "column", gap: "12px", marginBottom: "36px" }}>
                 <li style={{ display: "flex", alignItems: "center", gap: "12px", fontSize: "0.95rem" }}>
-                  <span style={{ color: "var(--green)", fontSize: "1.1rem" }}>✓</span>
+                  <span style={{ color: "var(--theme-primary)", fontSize: "1.1rem" }}>✓</span>
                   Year-round community access
                 </li>
                 <li style={{ display: "flex", alignItems: "center", gap: "12px", fontSize: "0.95rem" }}>
-                  <span style={{ color: "var(--green)", fontSize: "1.1rem" }}>✓</span>
+                  <span style={{ color: "var(--theme-primary)", fontSize: "1.1rem" }}>✓</span>
                   Exclusive workshops &amp; resources
                 </li>
                 <li style={{ display: "flex", alignItems: "center", gap: "12px", fontSize: "0.95rem" }}>
-                  <span style={{ color: "var(--green)", fontSize: "1.1rem" }}>✓</span>
+                  <span style={{ color: "var(--theme-primary)", fontSize: "1.1rem" }}>✓</span>
                   Peer networking &amp; co-founder matching
                 </li>
                 <li style={{ display: "flex", alignItems: "center", gap: "12px", fontSize: "0.95rem" }}>
-                  <span style={{ color: "var(--green)", fontSize: "1.1rem" }}>✓</span>
+                  <span style={{ color: "var(--theme-primary)", fontSize: "1.1rem" }}>✓</span>
                   Ambassador program eligibility
                 </li>
               </ul>
@@ -195,7 +183,7 @@ export default function ProgramsPage() {
             <div className="fade-up" style={{ order: 1 }}>
               <div
                 style={{
-                  background: "linear-gradient(135deg, #0a160a, #1a3d1a)",
+                  background: "linear-gradient(135deg, #3f3561, #2a2245)",
                   borderRadius: "var(--radius-lg)",
                   padding: "48px",
                   color: "#fff",
@@ -205,6 +193,7 @@ export default function ProgramsPage() {
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "flex-end",
+                  border: "1px solid rgba(255, 255, 255, 0.1)",
                 }}
               >
                 <div
@@ -214,7 +203,7 @@ export default function ProgramsPage() {
                     left: "-40px",
                     width: "200px",
                     height: "200px",
-                    background: "rgba(46, 125, 50, 0.2)",
+                    background: "rgba(255, 255, 255, 0.05)",
                     borderRadius: "50%",
                   }}
                 ></div>
@@ -225,7 +214,7 @@ export default function ProgramsPage() {
                     right: "-40px",
                     width: "250px",
                     height: "250px",
-                    background: "rgba(244, 196, 48, 0.08)",
+                    background: "rgba(255, 255, 255, 0.03)",
                     borderRadius: "50%",
                   }}
                 ></div>
@@ -236,8 +225,8 @@ export default function ProgramsPage() {
                   <div style={{ opacity: 0.7, marginBottom: "20px" }}>500+ Members Across Ghana</div>
                   <span
                     style={{
-                      background: "var(--green)",
-                      color: "#fff",
+                      background: "var(--theme-primary)",
+                      color: "var(--theme-bg)",
                       padding: "6px 16px",
                       borderRadius: "99px",
                       fontSize: "0.8rem",
@@ -278,19 +267,19 @@ export default function ProgramsPage() {
               </p>
               <ul style={{ display: "flex", flexDirection: "column", gap: "12px", marginBottom: "36px" }}>
                 <li style={{ display: "flex", alignItems: "center", gap: "12px", fontSize: "0.95rem" }}>
-                  <span style={{ color: "var(--gold)", fontSize: "1.1rem" }}>✓</span>
+                  <span style={{ color: "var(--theme-primary)", fontSize: "1.1rem" }}>✓</span>
                   Policy advocacy &amp; civic leadership
                 </li>
                 <li style={{ display: "flex", alignItems: "center", gap: "12px", fontSize: "0.95rem" }}>
-                  <span style={{ color: "var(--gold)", fontSize: "1.1rem" }}>✓</span>
+                  <span style={{ color: "var(--theme-primary)", fontSize: "1.1rem" }}>✓</span>
                   Regional YouthGovernor roles
                 </li>
                 <li style={{ display: "flex", alignItems: "center", gap: "12px", fontSize: "0.95rem" }}>
-                  <span style={{ color: "var(--gold)", fontSize: "1.1rem" }}>✓</span>
+                  <span style={{ color: "var(--theme-primary)", fontSize: "1.1rem" }}>✓</span>
                   Community impact projects
                 </li>
                 <li style={{ display: "flex", alignItems: "center", gap: "12px", fontSize: "0.95rem" }}>
-                  <span style={{ color: "var(--gold)", fontSize: "1.1rem" }}>✓</span>
+                  <span style={{ color: "var(--theme-primary)", fontSize: "1.1rem" }}>✓</span>
                   Direct engagement with decision-makers
                 </li>
               </ul>
@@ -301,7 +290,7 @@ export default function ProgramsPage() {
             <div className="fade-up">
               <div
                 style={{
-                  background: "linear-gradient(135deg, #0a0a18, #14143a)",
+                  background: "linear-gradient(135deg, #3f3561, #2a2245)",
                   borderRadius: "var(--radius-lg)",
                   padding: "48px",
                   color: "#fff",
@@ -311,6 +300,7 @@ export default function ProgramsPage() {
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "flex-end",
+                  border: "1px solid rgba(255, 255, 255, 0.1)",
                 }}
               >
                 <div
@@ -320,7 +310,7 @@ export default function ProgramsPage() {
                     right: "-40px",
                     width: "200px",
                     height: "200px",
-                    background: "rgba(244, 196, 48, 0.1)",
+                    background: "rgba(255, 255, 255, 0.05)",
                     borderRadius: "50%",
                   }}
                 ></div>
@@ -331,7 +321,7 @@ export default function ProgramsPage() {
                     left: "-40px",
                     width: "250px",
                     height: "250px",
-                    background: "rgba(214, 40, 40, 0.12)",
+                    background: "rgba(255, 255, 255, 0.03)",
                     borderRadius: "50%",
                   }}
                 ></div>
@@ -342,9 +332,9 @@ export default function ProgramsPage() {
                   <div style={{ opacity: 0.7, marginBottom: "20px" }}>Youth Voices. Real Impact.</div>
                   <span
                     style={{
-                      background: "rgba(244, 196, 48, 0.2)",
-                      color: "var(--gold)",
-                      border: "1px solid rgba(244, 196, 48, 0.4)",
+                      background: "rgba(255, 255, 255, 0.15)",
+                      color: "var(--theme-primary)",
+                      border: "1px solid rgba(255, 255, 255, 0.3)",
                       padding: "6px 16px",
                       borderRadius: "99px",
                       fontSize: "0.8rem",
@@ -373,7 +363,7 @@ export default function ProgramsPage() {
 
           <div className="stagger-container" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "2rem" }}>
             <article className="prog-card fade-up" style={{ minHeight: "280px" }}>
-              <div className="prog-card__bg" style={{ background: "linear-gradient(135deg, #0a160a, #1a3d1a)" }}></div>
+              <div className="prog-card__bg" style={{ background: "var(--theme-bg)" }}></div>
               <div className="prog-card__gradient"></div>
               <div className="prog-card__body">
                 <h3 className="prog-card__title">Young Entrepreneurs’ Network</h3>
@@ -382,7 +372,7 @@ export default function ProgramsPage() {
             </article>
 
             <article className="prog-card fade-up" style={{ minHeight: "280px" }}>
-              <div className="prog-card__bg" style={{ background: "linear-gradient(135deg, #001a33, #003366)" }}></div>
+              <div className="prog-card__bg" style={{ background: "var(--theme-bg)" }}></div>
               <div className="prog-card__gradient"></div>
               <div className="prog-card__body">
                 <h3 className="prog-card__title">World Young Leaders Organisation</h3>
@@ -391,7 +381,7 @@ export default function ProgramsPage() {
             </article>
 
             <article className="prog-card fade-up" style={{ minHeight: "280px" }}>
-              <div className="prog-card__bg" style={{ background: "linear-gradient(135deg, #333333, #000000)" }}></div>
+              <div className="prog-card__bg" style={{ background: "var(--theme-bg)" }}></div>
               <div className="prog-card__gradient"></div>
               <div className="prog-card__body">
                 <h3 className="prog-card__title">Penton</h3>

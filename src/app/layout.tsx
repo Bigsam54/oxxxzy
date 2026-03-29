@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import { Inter, Titillium_Web } from "next/font/google";
+import { Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import CounterInit from "@/components/CounterInit";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-body" });
-const titillium = Titillium_Web({
-  subsets: ["latin"],
-  weight: ["300", "400", "600", "700", "900"],
-  variable: "--font-head",
+const instrumentSerif = Instrument_Serif({ 
+  subsets: ["latin"], 
+  weight: ["400"],
+  style: ["normal", "italic"],
+  variable: "--font-instrument" 
 });
 
 export const metadata: Metadata = {
@@ -20,17 +20,17 @@ export const metadata: Metadata = {
     type: "website",
     title: "Oxzy | Collaborating for Ghana's Future",
     description: "Join a new generation of innovators, entrepreneurs, and builders across Ghana.",
-    images: ["https://res.cloudinary.com/dopscbnty/image/upload/v1774229861/OXY_logo_p8pchr.jpg"],
+    images: ["https://res.cloudinary.com/dv1ignqxh/image/upload/f_auto,q_auto/WhatsApp_Image_2026-03-27_at_8.36.39_PM_k5cnpy"],
     siteName: "Oxzy",
   },
   twitter: {
     card: "summary_large_image",
     title: "Oxzy | Collaborating for Ghana's Future",
-    images: ["https://res.cloudinary.com/dopscbnty/image/upload/v1774229861/OXY_logo_p8pchr.jpg"],
+    images: ["https://res.cloudinary.com/dv1ignqxh/image/upload/f_auto,q_auto/WhatsApp_Image_2026-03-27_at_8.36.39_PM_k5cnpy"],
   },
   icons: {
-    icon: "https://res.cloudinary.com/dopscbnty/image/upload/v1774229861/OXY_logo_p8pchr.jpg",
-    apple: "https://res.cloudinary.com/dopscbnty/image/upload/v1774229861/OXY_logo_p8pchr.jpg",
+    icon: "https://res.cloudinary.com/dv1ignqxh/image/upload/f_auto,q_auto/WhatsApp_Image_2026-03-27_at_8.36.39_PM_k5cnpy",
+    apple: "https://res.cloudinary.com/dv1ignqxh/image/upload/f_auto,q_auto/WhatsApp_Image_2026-03-27_at_8.36.39_PM_k5cnpy",
   },
 };
 
@@ -41,7 +41,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${titillium.variable}`}>
+      <body className={instrumentSerif.variable}>
         <ScrollReveal />
         <CounterInit />
         <Navbar />

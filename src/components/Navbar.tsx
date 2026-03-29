@@ -24,10 +24,10 @@ const Navbar = () => {
 
   const navLinks = [
     { label: "Home", href: "/", className: "nav-home" },
-    { label: "Programs", href: "/programs", className: "nav-programs" },
     { label: "Summit", href: "/summit", className: "nav-summit" },
+    { label: "Impact", href: "/social-proof", className: "nav-impact" },
     { label: "Club", href: "/club", className: "nav-club" },
-    { label: "YouthGov", href: "/youth-government", className: "nav-gyg" },
+    { label: "Youth Governement", href: "/youth-government", className: "nav-gyg" },
     { label: "Contact", href: "/contact", className: "nav-contact" },
   ];
 
@@ -36,14 +36,14 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`navbar ${isScrolled ? "scrolled" : ""}`} id="navbar" aria-label="Main navigation">
+    <nav className={`navbar ${isScrolled ? "scrolled" : ""}`} id="navbar" style={{ background: "var(--theme-cream)", transition: "all 0.3s ease", borderBottom: isScrolled ? "1px solid rgba(0,0,0,0.08)" : "1px solid rgba(0,0,0,0.04)" }}>
       <div className="container">
-        <div className="navbar__inner">
-          <Link href="/" className="navbar__logo" aria-label="Oxzy Home">
+        <div className="navbar__inner" style={{ padding: "20px 0" }}>
+          <Link href="/" className="navbar__logo" aria-label="Oxzy Home" style={{ display: "flex", alignItems: "center" }}>
             <img
-              src="https://res.cloudinary.com/dopscbnty/image/upload/v1774229861/OXY_logo_p8pchr.jpg"
+              src="https://res.cloudinary.com/dv1ignqxh/image/upload/f_auto,q_auto/WhatsApp_Image_2026-03-27_at_8.36.39_PM_k5cnpy"
               alt="Oxzy"
-              className="navbar__logo-img"
+              style={{ height: "48px", width: "auto", borderRadius: "8px" }}
             />
           </Link>
 
@@ -53,6 +53,11 @@ const Navbar = () => {
                 <Link
                   href={link.href}
                   className={`${link.className} ${pathname === link.href ? "active" : ""}`}
+                  style={{
+                    fontFamily: "var(--font-body)",
+                    fontWeight: 500,
+                    color: "var(--theme-bg)"
+                  }}
                 >
                   {link.label}
                 </Link>
@@ -61,7 +66,7 @@ const Navbar = () => {
           </ul>
 
           <div className="navbar__actions">
-            <Link href="/club" className="btn btn-primary btn-sm">
+            <Link href="/club" className="btn btn-primary btn-sm" style={{ background: "var(--theme-bg)", color: "white" }}>
               Join the Club
             </Link>
           </div>
@@ -73,15 +78,15 @@ const Navbar = () => {
             aria-expanded={isMobileNavOpen}
             onClick={toggleMobileNav}
           >
-            <span></span>
-            <span></span>
-            <span></span>
+            <span style={{ background: "var(--theme-bg)" }}></span>
+            <span style={{ background: "var(--theme-bg)" }}></span>
+            <span style={{ background: "var(--theme-bg)" }}></span>
           </button>
         </div>
       </div>
 
       {/* Mobile Nav */}
-      <div className={`navbar__mobile ${isMobileNavOpen ? "open" : ""}`} id="mobileNav" role="navigation">
+      <div className={`navbar__mobile ${isMobileNavOpen ? "open" : ""}`} id="mobileNav" style={{ background: "var(--theme-cream)" }}>
         {navLinks.map((link) => (
           <Link
             key={link.href}
@@ -89,10 +94,10 @@ const Navbar = () => {
             className={`${link.className} ${pathname === link.href ? "active" : ""}`}
             onClick={handleLinkClick}
           >
-            {link.label === "Summit" ? "Summit (YES)" : link.label === "Club" ? "Entrepreneurs Club" : link.label === "YouthGov" ? "Youth Government" : link.label}
+            {link.label === "Summit" ? "Summit 2026" : link.label === "Club" ? "Entrepreneurs Club" : link.label === "YouthGov" ? "Youth Government" : link.label}
           </Link>
         ))}
-        <Link href="/club" className="btn btn-primary" onClick={handleLinkClick}>
+        <Link href="/club" className="btn btn-primary" onClick={handleLinkClick} style={{ background: "var(--theme-bg)", color: "white" }}>
           Join the Club →
         </Link>
       </div>

@@ -1,79 +1,116 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
+import { Instagram, Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="footer" role="contentinfo">
+    <footer style={{ background: "var(--theme-bg)", color: "white", padding: "60px 0 40px" }}>
       <div className="container">
-        <div className="footer__grid">
-          <div className="footer__brand">
-            <div className="footer__brand-logo">
-              <Link href="/">
-                <img
-                  src="https://res.cloudinary.com/dopscbnty/image/upload/v1774229861/OXY_logo_p8pchr.jpg"
-                  alt="Oxzy"
-                  className="footer__logo-img"
-                />
-              </Link>
-            </div>
-            <p className="footer__tagline">
-              Empowering Ghana's next generation of innovators, entrepreneurs, and changemakers across all 16 regions.
+        <div className="footer__grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "48px", marginBottom: "48px" }}>
+          {/* Brand Column */}
+          <div className="footer__brand" style={{ maxWidth: "320px" }}>
+            <img 
+              src="https://res.cloudinary.com/dv1ignqxh/image/upload/f_auto,q_auto/WhatsApp_Image_2026-03-27_at_8.36.39_PM_k5cnpy" 
+              alt="Oxzy" 
+              style={{ height: "48px", width: "auto", borderRadius: "10px", marginBottom: "24px" }}
+            />
+            <p style={{ fontSize: "16px", color: "rgba(255,255,255,0.6)", lineHeight: 1.7 }}>
+              Collaborating for Ghana&apos;s future. A platform for the next generation of innovators, builders, and strategic leaders.
             </p>
-            <div className="social-links">
-              <a
-                href="https://www.instagram.com/oxzyorg/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-link"
-                aria-label="Follow @oxzyorg on Instagram"
+          </div>
+
+          {/* Links Wrapper for Mobile Side-by-Side */}
+          <div className="footer__links-wrapper" style={{ display: "contents" }}>
+            {/* Nav Column */}
+            <div className="footer__col">
+              <h4 style={{ fontFamily: "var(--font-head)", fontSize: "18px", fontWeight: 700, marginBottom: "16px", color: "var(--gold)" }}>Organization</h4>
+              <ul style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+                <li><Link href="/" style={{ fontSize: "15px", color: "rgba(255,255,255,0.75)", transition: "all 0.2s" }} className="footer-link">Home</Link></li>
+                <li><Link href="/summit" style={{ fontSize: "15px", color: "rgba(255,255,255,0.75)", transition: "all 0.2s" }} className="footer-link">Summit 2026</Link></li>
+                <li><Link href="/club" style={{ fontSize: "15px", color: "rgba(255,255,255,0.75)", transition: "all 0.2s" }} className="footer-link">Entrepreneurs Club</Link></li>
+                <li><Link href="/youth-government" style={{ fontSize: "15px", color: "rgba(255,255,255,0.75)", transition: "all 0.2s" }} className="footer-link">Youth Government</Link></li>
+              </ul>
+            </div>
+
+            {/* Resources Column */}
+            <div className="footer__col">
+              <h4 style={{ fontFamily: "var(--font-head)", fontSize: "18px", fontWeight: 700, marginBottom: "16px", color: "var(--gold)" }}>Support</h4>
+              <ul style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+                <li><Link href="/contact" style={{ fontSize: "15px", color: "rgba(255,255,255,0.75)", transition: "all 0.2s" }} className="footer-link">Contact Us</Link></li>
+                <li><Link href="#" style={{ fontSize: "15px", color: "rgba(255,255,255,0.75)", transition: "all 0.2s" }} className="footer-link">Privacy Policy</Link></li>
+                <li><Link href="#" style={{ fontSize: "15px", color: "rgba(255,255,255,0.75)", transition: "all 0.2s" }} className="footer-link">Terms of Service</Link></li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Social Column */}
+          <div className="footer__col footer__social">
+            <h4 style={{ fontFamily: "var(--font-head)", fontSize: "18px", fontWeight: 700, marginBottom: "16px", color: "var(--gold)" }}>Connect</h4>
+            <div style={{ display: "flex", gap: "16px" }}>
+              <a 
+                href="https://www.instagram.com/oxzy_ghana/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                style={{ width: "44px", height: "44px", borderRadius: "12px", background: "rgba(255,255,255,0.05)", display: "flex", alignItems: "center", justifyContent: "center", transition: "background 0.2s" }} 
+                className="social-icon"
+                aria-label="Instagram"
               >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path
-                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98C.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
-                  />
-                </svg>
+                <Instagram size={20} />
+              </a>
+              <a 
+                href="https://www.linkedin.com/company/oxzy-organization/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                style={{ width: "44px", height: "44px", borderRadius: "12px", background: "rgba(255,255,255,0.05)", display: "flex", alignItems: "center", justifyContent: "center", transition: "background 0.2s" }} 
+                className="social-icon"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={20} />
               </a>
             </div>
           </div>
-
-          <div>
-            <h3 className="footer__col-title">Programs</h3>
-            <ul className="footer__links">
-              <li><Link href="/summit">Young Entrepreneurs Summit</Link></li>
-              <li><Link href="/club">Entrepreneurs Club</Link></li>
-              <li><Link href="/youth-government">Ghana Youth Government</Link></li>
-              <li><Link href="/programs">All Programs</Link></li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="footer__col-title">Company</h3>
-            <ul className="footer__links">
-              <li><Link href="/#about">About Oxzy</Link></li>
-              <li><Link href="/#programs">Our Programs</Link></li>
-              <li><Link href="/contact">Contact Us</Link></li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="footer__col-title">Get Involved</h3>
-            <ul className="footer__links">
-              <li><Link href="/club">Join the Club</Link></li>
-              <li><Link href="/summit">Summit Registration</Link></li>
-              <li><Link href="/youth-government">Youth Government</Link></li>
-              <li><Link href="/partner">Partner With Us</Link></li>
-            </ul>
-          </div>
         </div>
 
-        <div className="footer__bottom">
-          <p className="footer__copy">© 2025 Oxzy. All rights reserved.</p>
-          <div className="footer__ghana">
-            <span></span>
-            <span>Made with pride in Ghana</span>
-          </div>
+        <div style={{ paddingTop: "32px", borderTop: "1px solid rgba(255,255,255,0.05)", display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: "20px" }}>
+          <p style={{ fontSize: "14px", color: "rgba(255,255,255,0.45)" }}>
+            © 2026 Oxzy Organization. All rights reserved.
+          </p>
         </div>
       </div>
+
+      <style jsx>{`
+        .footer-link:hover {
+          color: var(--gold) !important;
+        }
+        .social-icon:hover {
+          background: rgba(255,255,255,0.12) !important;
+        }
+        @media (max-width: 768px) {
+          .footer__grid {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 48px !important;
+          }
+          .footer__links-wrapper {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr !important;
+            gap: 32px !important;
+            margin-bottom: 0 !important;
+          }
+          .footer__col h4 {
+            font-size: 16px !important;
+            margin-bottom: 16px !important;
+          }
+          .footer__col ul {
+            gap: 10px !important;
+          }
+          .footer__col ul li a {
+            font-size: 14px !important;
+          }
+        }
+      `}</style>
     </footer>
   );
 };
