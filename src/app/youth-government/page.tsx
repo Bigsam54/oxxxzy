@@ -108,8 +108,8 @@ const YouthGovPage = () => {
         <section
           className="premium-hero"
           style={{
-            paddingTop: 'clamp(160px, 20vh, 200px)',
-            paddingBottom: '0',
+            paddingTop: 'clamp(160px, 25vh, 240px)',
+            paddingBottom: 'clamp(80px, 12vh, 160px)',
             minHeight: 'auto',
             position: 'relative',
             overflow: 'hidden',
@@ -171,6 +171,48 @@ const YouthGovPage = () => {
                   />
                 </div>
               </div>
+
+              {/* VISION CONTENT (Unified for Desktop, Sectioned for Mobile via CSS) */}
+              <div className="hero-vision-wrapper">
+                <p
+                  className="hero-subtitle"
+                  style={{
+                    textAlign: 'left',
+                    fontSize: 'clamp(18px, 1.8vw, 22px)',
+                    color: 'rgba(255,255,255,0.9)',
+                    maxWidth: '540px',
+                    marginBottom: '48px',
+                    lineHeight: 1.6,
+                    fontWeight: 300,
+                  }}
+                >
+                  A visionary platform designed to empower young people to actively participate in leadership, governance,
+                  and national problem-solving. Launching at YES 2026.
+                </p>
+                <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'flex-start' }}>
+                  <Link
+                    href="#join"
+                    className="btn btn-ghana-shine btn-lg"
+                    style={{
+                      color: 'white',
+                      fontWeight: 700,
+                      padding: '18px 40px',
+                    }}
+                  >
+                    Apply for Membership <ArrowRight size={20} />
+                  </Link>
+                  <Link
+                    href="/summit"
+                    className="btn btn-secondary btn-lg btn-hero-secondary"
+                    style={{
+                      border: '2px solid rgba(255,255,255,0.2)',
+                      padding: '16px 36px',
+                    }}
+                  >
+                    Explore YES 2026
+                  </Link>
+                </div>
+              </div>
             </div>
 
             {/* Desktop Hero Image (Re-integrated) */}
@@ -179,7 +221,7 @@ const YouthGovPage = () => {
               style={{
                 position: 'absolute',
                 right: '-12%',
-                top: '50%',
+                top: '3%',
                 transform: 'translateY(-50%)',
                 zIndex: 3,
                 width: '50%',
@@ -535,16 +577,20 @@ const YouthGovPage = () => {
           .hero-vision-wrapper {
             background: var(--theme-cream) !important;
             color: var(--theme-bg) !important;
-            padding: 32px 5% 48px !important;
+            padding: 12px 5% 8px !important;
             margin-left: -5.5% !important;
             width: 111% !important;
             box-shadow: 0 -10px 30px rgba(0,0,0,0.05);
           }
+          .hero-vision-wrapper div[style*="flex-wrap"] {
+            display: none !important;
+          }
           .hero-subtitle {
             color: var(--theme-text-muted-dark) !important;
             font-weight: 500 !important;
-            margin-bottom: 24px !important;
-            font-size: 16px !important;
+            margin-bottom: 4px !important;
+            font-size: 15px !important;
+            line-height: 1.5 !important;
           }
           .btn-hero-secondary {
             border-color: var(--theme-bg) !important;
@@ -552,12 +598,13 @@ const YouthGovPage = () => {
             font-weight: 700 !important;
           }
           .premium-hero {
+            padding-top: 130px !important;
             padding-bottom: 0px !important;
             min-height: auto !important;
           }
           .premium-hero h1 {
             font-size: 38px !important;
-            margin-bottom: 12px !important;
+            margin-bottom: 8px !important;
           }
           .container {
             padding-left: 5% !important;

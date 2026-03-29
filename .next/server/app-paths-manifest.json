@@ -1,7 +1,7 @@
 {
-  "/summit/page": "app/summit/page.js",
+  "/page": "app/page.js",
   "/youth-government/page": "app/youth-government/page.js",
   "/contact/page": "app/contact/page.js",
   "/social-proof/page": "app/social-proof/page.js",
-  "/club/page": "app/club/page.js"
+  "/summit/page": "app/summit/page.js"
 }

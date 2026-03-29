@@ -240,15 +240,15 @@ const Home = () => {
           }
           .cta-image-wrap {
             display: block !important;
-            height: 120% !important; /* Stretch up */
-            width: 140% !important; /* Stretch right */
-            margin-top: -10% !important; /* Cover the top side */
-            transform: translateX(12%) scale(1.1) !important; /* Shift right and slightly scale */
+            height: 120% !important;
+            width: 125% !important;
+            margin-top: -10% !important;
+            transform: translateX(-5%) scale(1.05) !important; /* Shifted left and reduced scale */
             position: relative;
             z-index: 0;
           }
           .cta-image-wrap img {
-            object-position: 50% 0% !important; /* Focus on the top of the image */
+            object-position: 15% 0% !important; /* Focus more on the left/center of the arch */
           }
           .section-cta .btn {
             padding: 12px 20px !important;
