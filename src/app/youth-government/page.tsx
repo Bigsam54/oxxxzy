@@ -159,7 +159,7 @@ const YouthGovPage = () => {
 
                 <div className="mobile-only" style={{ flexShrink: 0 }}>
                   <img
-                    src="https://res.cloudinary.com/dv1ignqxh/image/upload/v1774750654/GYG_moibel_xprxd1.png"
+                    src="https://res.cloudinary.com/dv1ignqxh/image/upload/v1774758641/GYG_moibel_r6pian.png"
                     alt="GYG Mobile Visual"
                     style={{
                       width: '230px',
@@ -172,96 +172,41 @@ const YouthGovPage = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </section>
 
-        {/* VISION SECTION (New Section on Mobile) */}
-        <section
-          className="hero-vision-section"
-          style={{
-            position: 'relative',
-            zIndex: 4,
-            padding: ' clamp(60px, 8vh, 100px) 0',
-            background: 'inherit', // Default to red on desktop
-          }}
-        >
-          <div
-            className="container"
-            style={{ maxWidth: '100%', paddingLeft: 'clamp(24px, 6vw, 8%)', margin: '0' }}
-          >
-            <div className="fade-up" style={{ maxWidth: '720px', textAlign: 'left', margin: '0' }}>
-              <p
-                className="hero-subtitle"
+            {/* Desktop Hero Image (Re-integrated) */}
+            <div
+              className="desktop-only fade-up"
+              style={{
+                position: 'absolute',
+                right: '-12%',
+                top: '50%',
+                transform: 'translateY(-50%)',
+                zIndex: 3,
+                width: '50%',
+                height: '100%',
+                display: 'flex',
+                justifyContent: 'flex-end',
+                alignItems: 'center',
+              }}
+            >
+              <img
+                src="https://res.cloudinary.com/dv1ignqxh/image/upload/v1774749850/GYG_q5a8ft.png"
+                alt="GYG Visual"
                 style={{
-                  textAlign: 'left',
-                  fontSize: 'clamp(18px, 1.8vw, 22px)',
-                  color: 'rgba(255,255,255,0.9)',
-                  maxWidth: '540px',
-                  marginBottom: '48px',
-                  lineHeight: 1.6,
-                  fontWeight: 300,
+                  width: 'auto',
+                  height: 'auto',
+                  maxWidth: '100%',
+                  maxHeight: '95vh',
+                  objectFit: 'contain',
+                  transform: 'scale(1.15)',
+                  transformOrigin: 'right center',
                 }}
-              >
-                A visionary platform designed to empower young people to actively participate in leadership, governance,
-                and national problem-solving. Launching at YES 2026.
-              </p>
-              <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'flex-start' }}>
-                <Link
-                  href="#join"
-                  className="btn btn-ghana-shine btn-lg"
-                  style={{
-                    color: 'white',
-                    fontWeight: 700,
-                    padding: '18px 40px',
-                  }}
-                >
-                  Apply for Membership <ArrowRight size={20} />
-                </Link>
-                <Link
-                  href="/summit"
-                  className="btn btn-secondary btn-lg"
-                  style={{
-                    border: '2px solid rgba(255,255,255,0.2)',
-                    padding: '16px 36px',
-                  }}
-                >
-                  Explore YES 2026
-                </Link>
-              </div>
+              />
             </div>
           </div>
         </section>
 
-          <div
-            className="desktop-only fade-up"
-            style={{
-              position: 'absolute',
-              right: '-12%',
-              top: '50%',
-              transform: 'translateY(-50%)',
-              zIndex: 3,
-              width: '50%',
-              height: '100%',
-              display: 'flex',
-              justifyContent: 'flex-end',
-              alignItems: 'center',
-            }}
-          >
-            <img
-              src="https://res.cloudinary.com/dv1ignqxh/image/upload/v1774749850/GYG_q5a8ft.png"
-              alt="GYG Visual"
-              style={{
-                width: 'auto',
-                height: 'auto',
-                maxWidth: '100%',
-                maxHeight: '95vh',
-                objectFit: 'contain',
-                transform: 'scale(1.15)',
-                transformOrigin: 'right center',
-              }}
-            />
-          </div>
-        </section>
+
 
         <section className="section" style={{ background: 'var(--theme-cream)', position: 'relative', zIndex: 4 }}>
           <div className="container" style={{ textAlign: 'left' }}>
@@ -586,19 +531,28 @@ const YouthGovPage = () => {
         </section>
       </main>
       <style jsx>{`
-          .hero-vision-section {
+        @media (max-width: 768px) {
+          .hero-vision-wrapper {
             background: var(--theme-cream) !important;
             color: var(--theme-bg) !important;
-            padding-top: 40px !important;
-            padding-bottom: 80px !important;
+            padding: 32px 5% 48px !important;
+            margin-left: -5.5% !important;
+            width: 111% !important;
+            box-shadow: 0 -10px 30px rgba(0,0,0,0.05);
           }
           .hero-subtitle {
             color: var(--theme-text-muted-dark) !important;
             font-weight: 500 !important;
-            margin-bottom: 32px !important;
+            margin-bottom: 24px !important;
+            font-size: 16px !important;
+          }
+          .btn-hero-secondary {
+            border-color: var(--theme-bg) !important;
+            color: var(--theme-bg) !important;
+            font-weight: 700 !important;
           }
           .premium-hero {
-            padding-bottom: 40px !important;
+            padding-bottom: 0px !important;
             min-height: auto !important;
           }
           .premium-hero h1 {
@@ -612,6 +566,7 @@ const YouthGovPage = () => {
             width: 160px !important;
             margin-left: -10px !important;
           }
+          /* ... rest of your mobile styles ... */
           .about-split {
             display: grid !important;
             grid-template-columns: repeat(3, 1fr) !important;

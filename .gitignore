@@ -3,6 +3,8 @@ node_modules/
 .npm/
 
 # Build artifacts
+.next/
+out/
 dist/
 build/
 .cache/
@@ -28,6 +30,8 @@ npm-debug.log*
 .env.local
 .env.*.local
 
-# Temp
+# Temp & Backups
 *.tmp
 *.temp
+build_error.txt
+globals_backup.css
