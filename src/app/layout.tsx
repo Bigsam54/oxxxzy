@@ -1,36 +1,37 @@
-import type { Metadata } from "next";
-import { Instrument_Serif } from "next/font/google";
-import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import ScrollReveal from "@/components/ScrollReveal";
-import CounterInit from "@/components/CounterInit";
+import type { Metadata } from 'next';
+import { Instrument_Serif } from 'next/font/google';
+import './globals.css';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import ScrollReveal from '@/components/ScrollReveal';
+import CounterInit from '@/components/CounterInit';
 
-const instrumentSerif = Instrument_Serif({ 
-  subsets: ["latin"], 
-  weight: ["400"],
-  style: ["normal", "italic"],
-  variable: "--font-instrument" 
+const instrumentSerif = Instrument_Serif({
+  subsets: ['latin'],
+  weight: ['400'],
+  style: ['normal', 'italic'],
+  variable: '--font-instrument',
 });
 
 export const metadata: Metadata = {
   title: "Oxzy | Collaborating for Ghana's Future",
-  description: "Oxzy - Collaborating for Ghana's Future. Join a new generation of innovators, entrepreneurs, and builders.",
+  description:
+    "Oxzy - Collaborating for Ghana's Future. Join a new generation of innovators, entrepreneurs, and builders.",
   openGraph: {
-    type: "website",
+    type: 'website',
     title: "Oxzy | Collaborating for Ghana's Future",
-    description: "Join a new generation of innovators, entrepreneurs, and builders across Ghana.",
-    images: ["https://res.cloudinary.com/dv1ignqxh/image/upload/f_auto,q_auto/WhatsApp_Image_2026-03-27_at_8.36.39_PM_k5cnpy"],
-    siteName: "Oxzy",
+    description: 'Join a new generation of innovators, entrepreneurs, and builders across Ghana.',
+    images: ['https://res.cloudinary.com/dv1ignqxh/image/upload/v1774984484/logo_k5xpwm.png'],
+    siteName: 'Oxzy',
   },
   twitter: {
-    card: "summary_large_image",
+    card: 'summary_large_image',
     title: "Oxzy | Collaborating for Ghana's Future",
-    images: ["https://res.cloudinary.com/dv1ignqxh/image/upload/f_auto,q_auto/WhatsApp_Image_2026-03-27_at_8.36.39_PM_k5cnpy"],
+    images: ['https://res.cloudinary.com/dv1ignqxh/image/upload/v1774984484/logo_k5xpwm.png'],
   },
   icons: {
-    icon: "https://res.cloudinary.com/dv1ignqxh/image/upload/f_auto,q_auto/WhatsApp_Image_2026-03-27_at_8.36.39_PM_k5cnpy",
-    apple: "https://res.cloudinary.com/dv1ignqxh/image/upload/f_auto,q_auto/WhatsApp_Image_2026-03-27_at_8.36.39_PM_k5cnpy",
+    icon: 'https://res.cloudinary.com/dv1ignqxh/image/upload/v1774984484/logo_k5xpwm.png',
+    apple: 'https://res.cloudinary.com/dv1ignqxh/image/upload/v1774984484/logo_k5xpwm.png',
   },
 };
 
