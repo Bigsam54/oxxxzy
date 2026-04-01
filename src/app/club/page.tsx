@@ -156,8 +156,7 @@ const ClubPage = () => {
                   fontWeight: 300,
                 }}
               >
-                The summit opens the door. The Entrepreneurs Club keeps it open — with exclusive masterclasses, peer
-                groups, a private network, and real opportunities to grow your business.
+                The Entrepreneurs Club and Young Innovators Scheme are designed to empower the next generation with the knowledge, mindset, and exposure needed to turn ideas into impactful realities.
               </p>
               <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'flex-start' }}>
                 <Link
@@ -222,13 +221,13 @@ const ClubPage = () => {
                     background: 'rgba(13,92,51,0.06)',
                   }}
                 >
-                  <Users size={20} />
+                  <BookOpen size={20} />
                 </div>
                 <h3 className="focus-title" style={{ fontSize: '16px', marginBottom: '8px' }}>
-                  Private Network
+                  Learning Sessions
                 </h3>
                 <p className="focus-desc" style={{ fontSize: '13px', lineHeight: 1.4 }}>
-                  Direct access to founders and mentors who have successfully built ventures in Ghana.
+                  Exclusive sessions led by entrepreneurs and innovators to start building ideas early.
                 </p>
               </div>
               <div className="focus-card fade-up" style={{ padding: '20px' }}>
@@ -241,13 +240,13 @@ const ClubPage = () => {
                     background: 'rgba(200,150,12,0.06)',
                   }}
                 >
-                  <BookOpen size={20} />
+                  <Users size={20} />
                 </div>
                 <h3 className="focus-title" style={{ fontSize: '16px', marginBottom: '8px' }}>
-                  Masterclasses
+                  Mentorship
                 </h3>
                 <p className="focus-desc" style={{ fontSize: '13px', lineHeight: 1.4 }}>
-                  Monthly deep-dives into scaling sales, efficient operations, and capital raising strategies.
+                  Direct access to a community of builders and creators for guidance and collaboration.
                 </p>
               </div>
               <div className="focus-card fade-up" style={{ padding: '20px' }}>
@@ -263,10 +262,10 @@ const ClubPage = () => {
                   <Rocket size={20} />
                 </div>
                 <h3 className="focus-title" style={{ fontSize: '16px', marginBottom: '8px' }}>
-                  Peer Strategy Groups
+                  Challenges
                 </h3>
                 <p className="focus-desc" style={{ fontSize: '13px', lineHeight: 1.4 }}>
-                  Weekly accountability and growth sessions with builders at your exact stage of development.
+                  Innovation challenges and real-world problem solving to drive meaningful change.
                 </p>
               </div>
             </div>

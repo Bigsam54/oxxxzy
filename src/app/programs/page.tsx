@@ -14,22 +14,22 @@ export default function ProgramsPage() {
         <div className="container hero__inner" style={{ position: "relative", zIndex: 2 }}>
           <div className="page-hero__content stagger-container">
             <div style={{ display: "inline-flex", alignItems: "center", gap: "10px", background: "rgba(13, 92, 51, 0.08)", color: "var(--ghana-green)", padding: "8px 20px", borderRadius: "100px", fontSize: "12px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "32px" }}>
-              <span>✦</span> Our Programs
+              <span>✦</span> Our Impact & Projects
             </div>
             <h1 className="hero__title" style={{ color: "var(--theme-bg)", fontWeight: 900, marginBottom: "24px" }}>
-              Our Initiatives,<br /><span style={{ color: "var(--gold)", fontStyle: "italic" }}>One Movement.</span>
+              Building Solutions,<br /><span style={{ color: "var(--gold)", fontStyle: "italic" }}>Creating Impact.</span>
             </h1>
             
             {/* Mobile Image - Premium Visual */}
             <div className="mobile-only" style={{ marginBottom: "32px", borderRadius: "24px", overflow: "hidden", boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}>
               <img 
                 src="https://res.cloudinary.com/dv1ignqxh/image/upload/v1774705868/Whisk_73f190b50b714c186f24c5711ba088c0dr_ix7xrv.png" 
-                alt="Oxzy" 
+                alt="Oxzy Impact" 
                 style={{ width: "100%", height: "auto", display: "block" }}
               />
             </div>
-            <p style={{ color: "var(--theme-text-muted-dark)", fontSize: "20px", maxWidth: "600px", lineHeight: 1.7 }}>
-              Eight flagship initiatives designed to empower, connect, and amplify young changemakers at every stage of their journey.
+            <p style={{ color: "var(--theme-text-muted-dark)", fontSize: "20px", maxWidth: "700px", lineHeight: 1.7 }}>
+              At Oxzy, we are building solutions, platforms, and communities that empower young people to innovate, lead, and create meaningful change. Through our projects, we are creating opportunities and systems that help young people turn vision into impact.
             </p>
           </div>
         </div>
@@ -355,37 +355,46 @@ export default function ProgramsPage() {
         <div className="container">
           <div className="section-header center text-center fade-up">
             <span className="section-label">More Initiatives</span>
-            <h2 className="section-title">Expanding Our Impact</h2>
+            <h2 className="section-title">Innovation in Action</h2>
             <p className="section-subtitle">
-              Beyond our flagship programs, we continuously build and support platforms shaping the future across multiple sectors.
+              Beyond our flagship programs, we continuously build and support platforms shaping the future across transportation, construction, and public safety.
             </p>
           </div>
 
           <div className="stagger-container" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "2rem" }}>
-            <article className="prog-card fade-up" style={{ minHeight: "280px" }}>
+            <article className="prog-card fade-up">
               <div className="prog-card__bg" style={{ background: "var(--theme-bg)" }}></div>
               <div className="prog-card__gradient"></div>
               <div className="prog-card__body">
-                <h3 className="prog-card__title">Young Entrepreneurs’ Network</h3>
-                <p className="prog-card__desc">A growing community of young entrepreneurs building startups, projects, and impactful ideas.</p>
+                <div style={{ color: "var(--gold)", fontSize: "12px", fontWeight: 700, textTransform: "uppercase", marginBottom: "12px", letterSpacing: "0.1em" }}>Public Safety</div>
+                <h3 className="prog-card__title">Cylax</h3>
+                <p className="prog-card__desc">
+                  An innovation-driven initiative focused on improving emergency response and accessibility to critical services. Cylax aims to strengthen public safety systems by making emergency communication faster, more accessible, and more reliable via technology.
+                </p>
               </div>
             </article>
 
-            <article className="prog-card fade-up" style={{ minHeight: "280px" }}>
+            <article className="prog-card fade-up">
               <div className="prog-card__bg" style={{ background: "var(--theme-bg)" }}></div>
               <div className="prog-card__gradient"></div>
               <div className="prog-card__body">
-                <h3 className="prog-card__title">World Young Leaders Organisation</h3>
-                <p className="prog-card__desc">A platform connecting emerging young leaders across sectors to collaborate globally.</p>
+                <div style={{ color: "var(--ghana-green)", fontSize: "12px", fontWeight: 700, textTransform: "uppercase", marginBottom: "12px", letterSpacing: "0.1em" }}>Transportation</div>
+                <h3 className="prog-card__title">Velo</h3>
+                <p className="prog-card__desc">
+                  A transport innovation initiative focused on solving challenges within the transportation sector. Velo introduces smarter, more efficient solutions to improve how people move within cities and across regions.
+                </p>
               </div>
             </article>
 
-            <article className="prog-card fade-up" style={{ minHeight: "280px" }}>
+            <article className="prog-card fade-up">
               <div className="prog-card__bg" style={{ background: "var(--theme-bg)" }}></div>
               <div className="prog-card__gradient"></div>
               <div className="prog-card__body">
+                <div style={{ color: "var(--ghana-red)", fontSize: "12px", fontWeight: 700, textTransform: "uppercase", marginBottom: "12px", letterSpacing: "0.1em" }}>Infrastructure</div>
                 <h3 className="prog-card__title">Penton</h3>
-                <p className="prog-card__desc">Construction and real estate company focused on modern infrastructure solutions.</p>
+                <p className="prog-card__desc">
+                  Focused on construction and real estate infrastructure that supports growth, opportunity, and modern living. Penton creates value-added projects that support economic growth and urban evolution.
+                </p>
               </div>
             </article>
           </div>

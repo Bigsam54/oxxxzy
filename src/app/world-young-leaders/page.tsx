@@ -2,9 +2,9 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Globe, Users, MessageCircle, Target, Eye, Sparkles, ArrowRight } from 'lucide-react';
+import { Globe, Users, MessageCircle, Target, Eye, Sparkles, ArrowRight, Lightbulb, ShieldCheck } from 'lucide-react';
 
-const WorldYoungLeadersPage = () => {
+const GhanaYouthConferencePage = () => {
   return (
     <>
       <main>
@@ -44,9 +44,9 @@ const WorldYoungLeadersPage = () => {
                   textAlign: 'left',
                 }}
               >
-                World Young Leaders
+                Ghana Youth
                 <br />
-                <span style={{ color: 'var(--ghana-gold)', fontStyle: 'italic' }}>Organisation & Forum</span>
+                <span style={{ color: 'var(--ghana-gold)', fontStyle: 'italic' }}>Conference</span>
               </h1>
 
               <div
@@ -60,7 +60,7 @@ const WorldYoungLeadersPage = () => {
               >
                 <img
                   src="https://res.cloudinary.com/dv1ignqxh/image/upload/v1774724142/WhatsApp_Image_2026-03-28_at_6.51.07_PM_phjeba.jpg"
-                  alt="World Young Leaders Forum"
+                  alt="Ghana Youth Conference"
                   style={{ width: '100%', height: 'auto', display: 'block', filter: 'brightness(0.9)' }}
                 />
               </div>
@@ -77,8 +77,7 @@ const WorldYoungLeadersPage = () => {
                   textAlign: 'left',
                 }}
               >
-                A global leadership platform created by Oxzy, bringing together a new generation of leaders who are
-                shaping the future of their communities, countries, and the world.
+                An annual gathering designed to bring Ghanaian youth together to discuss the challenges facing the country and explore practical solutions for national development.
               </p>
               <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'flex-start' }}>
                 <Link
@@ -86,7 +85,7 @@ const WorldYoungLeadersPage = () => {
                   className="btn btn-gold btn-lg"
                   style={{ background: 'var(--ghana-gold)', color: 'var(--theme-bg)', fontWeight: 700 }}
                 >
-                  Join the Movement <ArrowRight size={20} />
+                  Join the Dialogue <ArrowRight size={20} />
                 </Link>
               </div>
             </div>
@@ -104,7 +103,7 @@ const WorldYoungLeadersPage = () => {
               >
                 <img
                   src="https://res.cloudinary.com/dv1ignqxh/image/upload/v1774724142/WhatsApp_Image_2026-03-28_at_6.51.07_PM_phjeba.jpg"
-                  alt="World Young Leaders Forum"
+                  alt="Ghana Youth Conference"
                   style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.9)' }}
                 />
               </div>
@@ -123,10 +122,7 @@ const WorldYoungLeadersPage = () => {
                   marginBottom: '24px',
                 }}
               >
-                At a time when global challenges require bold thinking, collaboration, and responsible leadership, this
-                initiative connects young leaders, youth envoys, innovators, policy advocates, and change-makers from
-                international communities to engage in meaningful dialogue, share ideas, and build solutions that create
-                lasting impact.
+                Each year, the conference creates a platform where young people from different backgrounds — including students, entrepreneurs, innovators, and community leaders — can share perspectives, exchange ideas, and collaborate on solutions that can positively impact society.
               </p>
               <p
                 style={{
@@ -135,10 +131,7 @@ const WorldYoungLeadersPage = () => {
                   lineHeight: 1.7,
                 }}
               >
-                The World Young Leaders Forum serves as a space where emerging leaders can exchange perspectives on
-                governance, innovation, entrepreneurship, climate action, development, and global cooperation. Through
-                the forum, we aim to build bridges between young leaders across continents while strengthening youth
-                participation in global decision-making.
+                By bringing young people together in one space, the Ghana Youth Conference helps strengthen youth voices and encourages collective action toward building a better future for the country.
               </p>
             </div>
           </div>
@@ -148,10 +141,10 @@ const WorldYoungLeadersPage = () => {
           <div className="container">
             <div style={{ textAlign: 'left', maxWidth: '700px', margin: '0 0 64px' }} className="fade-up">
               <span className="section-tag" style={{ color: 'var(--ghana-green)' }}>
-                What We Do
+                Focus Areas
               </span>
               <h2 className="text-dark" style={{ textAlign: 'left' }}>
-                Building the next generation of global leaders
+                Driving National Progress
               </h2>
             </div>
 
@@ -167,10 +160,10 @@ const WorldYoungLeadersPage = () => {
                     marginBottom: '12px',
                   }}
                 >
-                  <Users size={20} />
+                  <Globe size={20} />
                 </div>
                 <h3 className="focus-title" style={{ fontSize: '16px', marginBottom: 0 }}>
-                  Host the World Young Leaders Forum
+                  National Development Conversations
                 </h3>
               </div>
 
@@ -185,10 +178,10 @@ const WorldYoungLeadersPage = () => {
                     marginBottom: '12px',
                   }}
                 >
-                  <Target size={20} />
+                  <ShieldCheck size={20} />
                 </div>
                 <h3 className="focus-title" style={{ fontSize: '16px', marginBottom: 0 }}>
-                  Develop the Next Generation of Global Leaders
+                  Youth Participation in Governance
                 </h3>
               </div>
 
@@ -203,10 +196,10 @@ const WorldYoungLeadersPage = () => {
                     marginBottom: '12px',
                   }}
                 >
-                  <MessageCircle size={20} />
+                  <Lightbulb size={20} />
                 </div>
                 <h3 className="focus-title" style={{ fontSize: '16px', marginBottom: 0 }}>
-                  Strengthening Youth Voice in Global Conversations
+                  Innovation and Problem Solving
                 </h3>
               </div>
             </div>
@@ -232,7 +225,7 @@ const WorldYoungLeadersPage = () => {
                     color: 'var(--gold)',
                   }}
                 >
-                  <Eye size={24} />
+                  <Users size={24} />
                   <span
                     style={{
                       fontSize: '12px',
@@ -241,7 +234,7 @@ const WorldYoungLeadersPage = () => {
                       textTransform: 'uppercase',
                     }}
                   >
-                    Our Vision
+                    Leadership & Collaboration
                   </span>
                 </div>
                 <h2
@@ -254,7 +247,7 @@ const WorldYoungLeadersPage = () => {
                     marginBottom: '24px',
                   }}
                 >
-                  A connected global community of young leaders
+                  Strengthening Youth Voices
                 </h2>
                 <p
                   style={{
@@ -263,8 +256,7 @@ const WorldYoungLeadersPage = () => {
                     lineHeight: 1.7,
                   }}
                 >
-                  To build a connected global community of young leaders who collaborate across borders to create
-                  innovative solutions, strengthen institutions, and drive sustainable development worldwide.
+                  The conference reflects Oxzy’s belief that young people should not only observe governance but also play a role in shaping it through collective action.
                 </p>
               </div>
 
@@ -278,7 +270,7 @@ const WorldYoungLeadersPage = () => {
                     color: 'var(--ghana-gold)',
                   }}
                 >
-                  <Target size={24} />
+                  <Lightbulb size={24} />
                   <span
                     style={{
                       fontSize: '12px',
@@ -287,7 +279,7 @@ const WorldYoungLeadersPage = () => {
                       textTransform: 'uppercase',
                     }}
                   >
-                    Our Mission
+                    Practical Solutions
                   </span>
                 </div>
                 <h2
@@ -300,7 +292,7 @@ const WorldYoungLeadersPage = () => {
                     marginBottom: '24px',
                   }}
                 >
-                  Identify, connect, train, and support
+                  Turning Ideas into Reality
                 </h2>
                 <p
                   style={{
@@ -309,8 +301,7 @@ const WorldYoungLeadersPage = () => {
                     lineHeight: 1.7,
                   }}
                 >
-                  To identify, connect, train, and support emerging leaders from around the world while providing a
-                  platform where they can exchange ideas, influence conversations, and contribute to shaping the future.
+                  Each year we focus on exploring practical solutions to the challenges facing Ghana, ensuring that the dialogue leads to measurable impact.
                 </p>
               </div>
             </div>
@@ -338,11 +329,11 @@ const WorldYoungLeadersPage = () => {
                     textTransform: 'uppercase',
                   }}
                 >
-                  Why This Matters
+                  The Gateway
                 </span>
               </div>
               <h2 className="text-dark" style={{ textAlign: 'left', marginBottom: '24px' }}>
-                Leadership must evolve with the world
+                Be Part of the Future
               </h2>
               <p
                 style={{
@@ -352,7 +343,7 @@ const WorldYoungLeadersPage = () => {
                   marginBottom: '24px',
                 }}
               >
-                The world is changing rapidly, and leadership must evolve with it.
+                The Ghana Youth Conference is more than just an event; it is a catalyst for change.
               </p>
               <p
                 style={{
@@ -362,13 +353,10 @@ const WorldYoungLeadersPage = () => {
                   marginBottom: '40px',
                 }}
               >
-                The World Young Leaders Organisation & Forum exists to ensure that young leaders are equipped,
-                connected, and empowered to take on the challenges and opportunities of the future. By bringing together
-                leaders from different regions, sectors, and backgrounds, we are building a global network of
-                individuals committed to progress, collaboration, and positive impact.
+                Join students, entrepreneurs, innovators, and leaders as we collaborate to build a better future for our country. Your voice is essential to the conversation.
               </p>
               <Link href="/club" className="btn btn-primary" style={{ background: 'var(--theme-bg)', color: 'white' }}>
-                Get Involved <ArrowRight size={18} />
+                Join the Network <ArrowRight size={18} />
               </Link>
             </div>
           </div>
@@ -389,21 +377,21 @@ const WorldYoungLeadersPage = () => {
               text-align: left !important;
             }
             .wyl-cards-grid {
-              grid-template-columns: repeat(3, 1fr) !important;
-              gap: 8px !important;
+              grid-template-columns: repeat(1, 1fr) !important;
+              gap: 16px !important;
             }
             .wyl-card {
-              padding: 16px 12px !important;
-              text-align: center !important;
+              padding: 24px !important;
+              text-align: left !important;
             }
             .wyl-card .focus-icon-wrap {
-              width: 36px !important;
-              height: 36px !important;
-              margin: 0 auto 12px !important;
+              width: 40px !important;
+              height: 40px !important;
+              margin: 0 0 16px !important;
             }
             .wyl-card .focus-title {
-              font-size: 11px !important;
-              line-height: 1.2 !important;
+              font-size: 16px !important;
+              line-height: 1.4 !important;
             }
           }
         `}</style>
@@ -412,4 +400,5 @@ const WorldYoungLeadersPage = () => {
   );
 };
 
-export default WorldYoungLeadersPage;
+export default GhanaYouthConferencePage;
+

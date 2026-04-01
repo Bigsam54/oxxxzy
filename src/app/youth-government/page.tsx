@@ -13,6 +13,8 @@ import {
   Share2,
   ChevronDown,
   ChevronUp,
+  MessageCircle,
+  Lightbulb,
 } from 'lucide-react';
 import { useEffect } from 'react';
 
@@ -133,6 +135,7 @@ const YouthGovPage = () => {
           >
             <div className="fade-up" style={{ maxWidth: '720px', textAlign: 'left', margin: '0' }}>
               <div
+                className="hero-header-flex"
                 style={{
                   display: 'flex',
                   alignItems: 'center',
@@ -157,7 +160,7 @@ const YouthGovPage = () => {
                   </h1>
                 </div>
 
-                <div className="mobile-only" style={{ flexShrink: 0 }}>
+                <div className="mobile-only mobile-hero-img-box" style={{ flexShrink: 0 }}>
                   <img
                     src="https://res.cloudinary.com/dv1ignqxh/image/upload/v1774758641/GYG_moibel_r6pian.png"
                     alt="GYG Mobile Visual"
@@ -172,8 +175,42 @@ const YouthGovPage = () => {
                 </div>
               </div>
 
+              <div className="hero-actions-container" style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'flex-start', marginBottom: '32px' }}>
+                   <Link
+                  href="#join"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '12px',
+                    color: 'white',
+                    background: 'var(--ghana-green)',
+                    padding: '16px 32px',
+                    borderRadius: '12px',
+                    fontWeight: 800,
+                    fontSize: '16px',
+                    textDecoration: 'none',
+                    transition: 'all 0.3s ease',
+                    boxShadow: '0 8px 20px rgba(13, 92, 51, 0.3)',
+                  }}
+                  className="mobile-btn-resize"
+                >
+                  Voice your opinion <ArrowRight size={20} style={{ marginLeft: '8px' }} />
+                </Link>
+                <Link
+                  href="/summit"
+                  className="btn btn-secondary btn-lg btn-hero-secondary desktop-only"
+                  style={{
+                    border: '2px solid rgba(255,255,255,0.2)',
+                    padding: '14px 32px',
+                    borderRadius: '12px',
+                  }}
+                >
+                  Explore YES 2026
+                </Link>
+              </div>
+
               {/* VISION CONTENT (Unified for Desktop, Sectioned for Mobile via CSS) */}
-              <div className="hero-vision-wrapper">
+              <div className="hero-vision-wrapper" style={{ margin: '0' }}>
                 <p
                   className="hero-subtitle"
                   style={{
@@ -181,37 +218,13 @@ const YouthGovPage = () => {
                     fontSize: 'clamp(18px, 1.8vw, 22px)',
                     color: 'rgba(255,255,255,0.9)',
                     maxWidth: '540px',
-                    marginBottom: '48px',
+                    marginBottom: '0',
                     lineHeight: 1.6,
                     fontWeight: 300,
                   }}
                 >
-                  A visionary platform designed to empower young people to actively participate in leadership, governance,
-                  and national problem-solving. Launching at YES 2026.
+                  A visionary platform created to empower young people to actively contribute to national development and governance. Providing a space for leaders to engage, propose ideas, and shape the future of Ghana.
                 </p>
-                <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'flex-start' }}>
-                  <Link
-                    href="#join"
-                    className="btn btn-ghana-shine btn-lg"
-                    style={{
-                      color: 'white',
-                      fontWeight: 700,
-                      padding: '18px 40px',
-                    }}
-                  >
-                    Apply for Membership <ArrowRight size={20} />
-                  </Link>
-                  <Link
-                    href="/summit"
-                    className="btn btn-secondary btn-lg btn-hero-secondary"
-                    style={{
-                      border: '2px solid rgba(255,255,255,0.2)',
-                      padding: '16px 36px',
-                    }}
-                  >
-                    Explore YES 2026
-                  </Link>
-                </div>
               </div>
             </div>
 
@@ -270,12 +283,11 @@ const YouthGovPage = () => {
                   className="focus-icon-wrap"
                   style={{ color: 'var(--ghana-red)', background: 'rgba(214,40,40,0.06)' }}
                 >
-                  <Users size={32} />
+                  <Trophy size={32} />
                 </div>
-                <h3 className="focus-title text-dark">Participate</h3>
+                <h3 className="focus-title text-dark">Develop Leadership</h3>
                 <p className="focus-desc">
-                  Contribute ideas, policy discussions, and innovative solutions to issues affecting your community and
-                  the nation.
+                  Providing young people with the tools and mindset needed to lead effectively in both civic and professional spaces.
                 </p>
               </div>
               <div className="focus-card fade-up">
@@ -283,11 +295,11 @@ const YouthGovPage = () => {
                   className="focus-icon-wrap"
                   style={{ color: 'var(--ghana-gold)', background: 'rgba(200,150,12,0.06)' }}
                 >
-                  <Trophy size={32} />
+                  <MessageCircle size={32} />
                 </div>
-                <h3 className="focus-title text-dark">Lead</h3>
+                <h3 className="focus-title text-dark">Engage in Dialogue</h3>
                 <p className="focus-desc">
-                  Develop as a young leader prepared to engage constructively in civic life and public service.
+                  Creating space for students, innovators, and leaders to engage in important civic discussions that shape national policy.
                 </p>
               </div>
               <div className="focus-card fade-up">
@@ -295,11 +307,11 @@ const YouthGovPage = () => {
                   className="focus-icon-wrap"
                   style={{ color: 'var(--ghana-green)', background: 'rgba(13,92,51,0.06)' }}
                 >
-                  <Hammer size={32} />
+                  <Lightbulb size={32} />
                 </div>
-                <h3 className="focus-title text-dark">Build</h3>
+                <h3 className="focus-title text-dark">Contribute Ideas</h3>
                 <p className="focus-desc">
-                  Collaborate with peers to shape the conversations and decisions that determine Ghana&apos;s future.
+                  Encouraging young thinkers to propose practical solutions to societal challenges and turn vision into national impact.
                 </p>
               </div>
             </div>
@@ -582,6 +594,14 @@ const YouthGovPage = () => {
             width: 111% !important;
             box-shadow: 0 -10px 30px rgba(0,0,0,0.05);
           }
+          .hero-actions-container {
+            margin-bottom: 24px !important;
+            padding-right: 5% !important;
+          }
+          .mobile-full-width {
+            width: 100% !important;
+            justify-content: center !important;
+          }
           .hero-vision-wrapper div[style*="flex-wrap"] {
             display: none !important;
           }
@@ -598,20 +618,33 @@ const YouthGovPage = () => {
             font-weight: 700 !important;
           }
           .premium-hero {
-            padding-top: 130px !important;
+            padding-top: 50px !important;
             padding-bottom: 0px !important;
             min-height: auto !important;
           }
           .premium-hero h1 {
-            font-size: 38px !important;
-            margin-bottom: 8px !important;
+            font-size: 44px !important;
+            line-height: 1.1 !important;
+            margin-bottom: 0px !important;
+          }
+          .hero-header-flex {
+            margin-bottom: 4px !important;
+          }
+          .mobile-hero-img-box {
+            margin-top: 15px !important;
           }
           .container {
             padding-left: 5% !important;
           }
           .mobile-only img {
-            width: 160px !important;
+            width: 180px !important;
             margin-left: -10px !important;
+          }
+          .mobile-btn-resize {
+            padding: 8px 16px !important;
+            font-size: 12px !important;
+            width: auto !important;
+            display: inline-flex !important;
           }
           /* ... rest of your mobile styles ... */
           .about-split {

@@ -162,8 +162,7 @@ const SummitPage = () => {
                   fontWeight: 300,
                 }}
               >
-                Join hundreds of young Ghanaian entrepreneurs, innovators, and leaders for our flagship virtual summit.
-                A platform to learn, collaborate, and build the future of our nation.
+                A flagship platform bringing together young founders, innovators, and leaders to strengthen youth participation in entrepreneurship and leadership while creating opportunities for collaboration.
               </p>
 
               <div

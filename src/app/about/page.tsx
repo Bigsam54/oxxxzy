@@ -191,59 +191,65 @@ const AboutPage = () => {
           </div>
         </section>
 
-        <section className="section" style={{ background: 'var(--theme-cream)', padding: '80px 0' }}>
-          <div className="container" style={{ maxWidth: '800px' }}>
-            <div className="fade-up" style={{ textAlign: 'left', marginBottom: '48px' }}>
+        <section className="section" style={{ background: 'var(--theme-cream)', padding: '100px 0' }}>
+          <div className="container" style={{ maxWidth: '1100px' }}>
+            <div className="fade-up" style={{ textAlign: 'left', marginBottom: '64px' }}>
               <span className="section-tag" style={{ color: 'var(--ghana-green)' }}>
-                Our Team
+                Our Leadership
               </span>
               <h2
                 className="text-dark"
-                style={{ fontSize: 'clamp(28px, 4vw, 40px)', textAlign: 'left', marginBottom: 0 }}
+                style={{ fontSize: 'clamp(32px, 5vw, 48px)', textAlign: 'left', marginBottom: '16px' }}
               >
-                Meet the people behind Oxzy
+                Meet the minds behind Oxzy
               </h2>
+              <p style={{ color: 'var(--theme-text-muted-dark)', fontSize: '18px', maxWidth: '600px' }}>
+                A dedicated team of innovators, thinkers, and leaders committed to building Ghana&apos;s sustainable future.
+              </p>
             </div>
 
-            <div className="team-grid fade-up">
-              <div className="team-card">
-                <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face"
-                  alt="Team Member"
-                  className="team-img"
-                />
-                <h4 className="team-name">Team Member</h4>
-                <p className="team-role">Founder & CEO</p>
+            {/* CHAIRMAN OF THE BOARD */}
+            <div className="fade-up" style={{ marginBottom: '80px', textAlign: 'center' }}>
+              <h3 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--theme-bg)', marginBottom: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
+                <span style={{ width: '40px', height: '2px', background: 'var(--ghana-gold)' }}></span>
+                Chairman of the Board
+                <span style={{ width: '40px', height: '2px', background: 'var(--ghana-gold)' }}></span>
+              </h3>
+              <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <div className="team-card chairman-card" style={{ maxWidth: '320px', width: '100%', textAlign: 'center' }}>
+                  <div className="team-img-wrap chairman-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face" alt="Moses Gawu" className="team-img" />
+                  </div>
+                  <h4 className="team-name" style={{ fontSize: '22px' }}>Moses Gawu</h4>
+                  <p className="team-role" style={{ color: 'var(--ghana-gold)' }}>Chairman of the board</p>
+                </div>
               </div>
+            </div>
 
-              <div className="team-card">
-                <img
-                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face"
-                  alt="Team Member"
-                  className="team-img"
-                />
-                <h4 className="team-name">Team Member</h4>
-                <p className="team-role">Co-Founder & COO</p>
-              </div>
-
-              <div className="team-card">
-                <img
-                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=face"
-                  alt="Team Member"
-                  className="team-img"
-                />
-                <h4 className="team-name">Team Member</h4>
-                <p className="team-role">Programs Director</p>
-              </div>
-
-              <div className="team-card">
-                <img
-                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face"
-                  alt="Team Member"
-                  className="team-img"
-                />
-                <h4 className="team-name">Team Member</h4>
-                <p className="team-role">Communications Lead</p>
+            {/* EXECUTIVE LEADERSHIP */}
+            <div className="fade-up">
+              <h3 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--theme-bg)', marginBottom: '32px', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <span style={{ width: '40px', height: '2px', background: 'var(--ghana-green)' }}></span>
+                Executive Leadership
+              </h3>
+              <div className="team-grid">
+                {[
+                  { name: 'Casey Mills', role: 'Co Founder, President', img: 'https://images.unsplash.com/photo-1548142813-c348350df52b?w=400&h=400&fit=crop&crop=face' },
+                  { name: 'Kwabena O. Karikari', role: 'Co Founder, CEO', img: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face' },
+                  { name: 'Dennis Mensah', role: 'Vice President', img: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&crop=face' },
+                  { name: 'Andy Kwesi Apenteng', role: 'Chief Technology Officer', img: 'https://images.unsplash.com/photo-1531384441138-2736e62e0919?w=400&h=400&fit=crop&crop=face' },
+                  { name: 'Christopher Sam', role: 'Deputy Chief Technology Officer', img: 'https://images.unsplash.com/photo-1507152832244-10d45c7eda57?w=400&h=400&fit=crop&crop=face' },
+                  { name: 'Ebenezer Hammond', role: 'PRO', img: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face' },
+                  { name: 'Lydia Odame', role: 'Secretary', img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face' },
+                ].map((member, i) => (
+                  <div key={i} className="team-card">
+                    <div className="team-img-wrap">
+                      <img src={member.img} alt={member.name} className="team-img" />
+                    </div>
+                    <h4 className="team-name">{member.name}</h4>
+                    <p className="team-role">{member.role}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -258,43 +264,64 @@ const AboutPage = () => {
           }
           .team-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 32px;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: clamp(32px, 5vw, 48px);
+          }
+          .board-grid {
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            max-width: 900px;
           }
           .team-card {
-            text-align: center;
+            text-align: left;
+            transition: transform 0.3s ease;
+          }
+          .team-card:hover {
+            transform: translateY(-8px);
+          }
+          .team-img-wrap {
+            width: 100%;
+            aspect-ratio: 1;
+            border-radius: 24px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            background: #eee;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
           }
           .team-img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
-            margin-bottom: 12px;
-            border: 3px solid white;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease;
+          }
+          .team-card:hover .team-img {
+            transform: scale(1.1);
           }
           .team-name {
-            font-size: 14px;
-            font-weight: 700;
+            font-size: 18px;
+            font-weight: 800;
             color: var(--theme-bg);
             margin-bottom: 4px;
+            letter-spacing: -0.02em;
           }
           .team-role {
-            font-size: 12px;
-            color: var(--theme-text-muted-dark);
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--ghana-red);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
             margin: 0;
           }
           @media (max-width: 600px) {
             .team-grid {
               grid-template-columns: repeat(2, 1fr);
-              gap: 24px;
+              gap: 20px;
             }
-            .team-img {
-              width: 60px;
-              height: 60px;
+            .team-img-wrap {
+              border-radius: 16px;
+              margin-bottom: 12px;
             }
             .team-name {
-              font-size: 12px;
+              font-size: 14px;
             }
             .team-role {
               font-size: 10px;
