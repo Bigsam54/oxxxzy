@@ -144,7 +144,7 @@ const YouthGovPage = () => {
                   marginBottom: 'clamp(20px, 5vh, 40px)',
                 }}
               >
-                <div style={{ flex: 1 }}>
+                <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '12px' }}>
                   <h1
                     style={{
                       textAlign: 'left',
@@ -155,9 +155,33 @@ const YouthGovPage = () => {
                       margin: 0,
                     }}
                   >
-                    Ghana Youth <br />
-                    <span style={{ color: 'var(--ghana-gold)', fontStyle: 'italic' }}>Government</span>
+                    <span className="hero-title-main">Ghana Youth</span> <br />
+                    <span className="hero-title-accent" style={{ color: 'var(--ghana-gold)', fontStyle: 'italic' }}>Government</span>
                   </h1>
+
+                  {/* MOBILE BUTTON (Immediately under Title) */}
+                  <div className="mobile-only" style={{ marginTop: '4px' }}>
+                    <Link
+                      href="#join"
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '10px',
+                        color: 'white',
+                        background: 'var(--ghana-green)',
+                        padding: '8px 20px',
+                        borderRadius: '10px',
+                        fontWeight: 800,
+                        fontSize: '13px',
+                        textDecoration: 'none',
+                        transition: 'all 0.3s ease',
+                        boxShadow: '0 8px 20px rgba(13, 92, 51, 0.3)',
+                        width: 'auto',
+                      }}
+                    >
+                      Voice your opinion <ArrowRight size={16} />
+                    </Link>
+                  </div>
                 </div>
 
                 <div className="mobile-only mobile-hero-img-box" style={{ flexShrink: 0 }}>
@@ -175,8 +199,9 @@ const YouthGovPage = () => {
                 </div>
               </div>
 
-              <div className="hero-actions-container" style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'flex-start', marginBottom: '32px' }}>
-                   <Link
+              {/* DESKTOP BUTTONS */}
+              <div className="hero-actions-container desktop-only" style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'flex-start', marginBottom: '32px' }}>
+                <Link
                   href="#join"
                   style={{
                     display: 'inline-flex',
@@ -192,13 +217,12 @@ const YouthGovPage = () => {
                     transition: 'all 0.3s ease',
                     boxShadow: '0 8px 20px rgba(13, 92, 51, 0.3)',
                   }}
-                  className="mobile-btn-resize"
                 >
-                  Voice your opinion <ArrowRight size={20} style={{ marginLeft: '8px' }} />
+                  Voice your opinion <ArrowRight size={20} />
                 </Link>
                 <Link
                   href="/summit"
-                  className="btn btn-secondary btn-lg btn-hero-secondary desktop-only"
+                  className="btn btn-secondary btn-lg btn-hero-secondary"
                   style={{
                     border: '2px solid rgba(255,255,255,0.2)',
                     padding: '14px 32px',
@@ -209,7 +233,7 @@ const YouthGovPage = () => {
                 </Link>
               </div>
 
-              {/* VISION CONTENT (Unified for Desktop, Sectioned for Mobile via CSS) */}
+              {/* VISION CONTENT */}
               <div className="hero-vision-wrapper" style={{ margin: '0' }}>
                 <p
                   className="hero-subtitle"
@@ -234,7 +258,7 @@ const YouthGovPage = () => {
               style={{
                 position: 'absolute',
                 right: '-12%',
-                top: '3%',
+                top: '-5%',
                 transform: 'translateY(-50%)',
                 zIndex: 3,
                 width: '50%',
@@ -260,6 +284,7 @@ const YouthGovPage = () => {
             </div>
           </div>
         </section>
+
 
 
 
@@ -618,33 +643,48 @@ const YouthGovPage = () => {
             font-weight: 700 !important;
           }
           .premium-hero {
-            padding-top: 50px !important;
-            padding-bottom: 0px !important;
+            padding-top: 110px !important;
+            padding-bottom: 40px !important;
             min-height: auto !important;
           }
+          .hero-title-main, .hero-title-accent {
+            display: inline !important;
+          }
           .premium-hero h1 {
-            font-size: 44px !important;
+            font-size: clamp(42px, 7vw, 68px) !important;
             line-height: 1.1 !important;
             margin-bottom: 0px !important;
+            text-align: left !important;
+          }
+          @media (max-width: 768px) {
+            .premium-hero h1 {
+              font-size: 38px !important;
+            }
           }
           .hero-header-flex {
-            margin-bottom: 4px !important;
+            margin-bottom: 24px !important;
           }
           .mobile-hero-img-box {
-            margin-top: 15px !important;
+            margin-top: 10px !important;
           }
-          .container {
-            padding-left: 5% !important;
-          }
-          .mobile-only img {
-            width: 180px !important;
-            margin-left: -10px !important;
+          .hero-actions-container {
+            justify-content: center !important;
+            margin-bottom: 32px !important;
+            padding-right: 0 !important;
           }
           .mobile-btn-resize {
-            padding: 8px 16px !important;
-            font-size: 12px !important;
-            width: auto !important;
-            display: inline-flex !important;
+            width: 100% !important;
+            justify-content: center !important;
+            padding: 10px 24px !important;
+            font-size: 14px !important;
+            border-radius: 12px !important;
+          }
+          .container {
+            padding: 0 5% !important;
+          }
+          .mobile-only img {
+            width: 140px !important;
+            margin-left: -5px !important;
           }
           /* ... rest of your mobile styles ... */
           .about-split {
