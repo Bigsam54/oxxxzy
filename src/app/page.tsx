@@ -100,25 +100,133 @@ const Home = () => {
       {/* ABOUT US SECTION */}
       <section className="section" id="about" style={{ paddingBottom: "0" }}>
         <div className="container">
-          <div className="fade-up" style={{ maxWidth: "840px", textAlign: "left" }}>
-            <span className="section-tag">About Oxzy</span>
-            <h2 className="text-dark" style={{ fontSize: "clamp(40px, 6vw, 64px)", textAlign: "left" }}>Young innovators building sustainable communities</h2>
-            <p style={{ color: "var(--theme-text-muted-dark)", fontSize: "19px", marginBottom: "28px", lineHeight: 1.6 }}>Oxzy is an organisation of young innovators aimed at building sustainable communities through innovative creativity. We believe that when young people are given the right platforms, they become unstoppable.</p>
-            <p style={{ color: "var(--theme-text-muted-dark)", fontSize: "19px", lineHeight: 1.6 }}>We create spaces where young people connect, learn, collaborate, and build solutions that address real challenges within society.</p>
-            <Link href="/club" className="btn btn-primary" style={{ background: "var(--theme-bg)", color: "white", marginTop: "32px", marginBottom: "48px" }}>Join Our Community</Link>
-          </div>
-        </div>
+          <div className="about-grid" style={{ 
+            display: "grid", 
+            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", 
+            gap: "clamp(48px, 6vw, 100px)",
+            alignItems: "center"
+          }}>
+            {/* Left Content */}
+            <div className="fade-up" style={{ textAlign: "left" }}>
+              <span className="section-tag">About Oxzy</span>
+              <h2 className="text-dark" style={{ 
+                fontSize: "clamp(40px, 6vw, 64px)", 
+                textAlign: "left", 
+                marginBottom: "24px",
+                lineHeight: 1.1 
+              }}>
+                Young innovators building sustainable communities
+              </h2>
+              <p style={{ 
+                color: "var(--theme-text-muted-dark)", 
+                fontSize: "19px", 
+                marginBottom: "24px", 
+                lineHeight: 1.6 
+              }}>
+                Oxzy is an organisation of young innovators aimed at building sustainable communities through innovative creativity. We believe that when young people are given the right platforms, they become unstoppable.
+              </p>
+              <p style={{ 
+                color: "var(--theme-text-muted-dark)", 
+                fontSize: "19px", 
+                lineHeight: 1.6,
+                marginBottom: "40px" 
+              }}>
+                We create spaces where young people connect, learn, collaborate, and build solutions that address real challenges within society.
+              </p>
+              <Link 
+                href="/club" 
+                className="btn btn-primary" 
+                style={{ 
+                  background: "var(--ghana-red)", 
+                  color: "white", 
+                  padding: "16px 32px",
+                  boxShadow: "0 8px 25px rgba(214, 40, 40, 0.25)"
+                }}
+              >
+                Join Our Community
+              </Link>
+            </div>
 
-        {/* Integrated Image Slider */}
-        <div className="slider-container" style={{ marginTop: "40px", paddingBottom: "80px" }}>
-          <div className="slider-track" style={{ height: "clamp(240px, 40vh, 480px)" }}>
-            <div className="slider-item"><img src="https://res.cloudinary.com/dv1ignqxh/image/upload/v1774705866/Whisk_c2ac22b154dd98986b5420db3c9e45a1dr_fz230n.png" alt="Oxzy Event" /></div>
-            <div className="slider-item"><img src="https://res.cloudinary.com/dv1ignqxh/image/upload/v1774723827/Whisk_kjmwajnyajmkhjyy0im1mmytymz4qtlidtol1sz_ylk2im.png" alt="Oxzy Community" /></div>
-            <div className="slider-item"><img src="https://res.cloudinary.com/dv1ignqxh/image/upload/v1774724141/WhatsApp_Image_2026-03-28_at_6.51.09_PM_1_y8h4yy.jpg" alt="Oxzy Building" /></div>
-            {/* Duplicate for seamless loop */}
-            <div className="slider-item"><img src="https://res.cloudinary.com/dv1ignqxh/image/upload/v1774723833/Whisk_czyzmgm0gtmyctzk1czmzjyty2mkrtl2igmh1yy_fxxdgt.png" alt="Oxzy Event" /></div>
-            <div className="slider-item"><img src="https://res.cloudinary.com/dv1ignqxh/image/upload/v1774723827/Whisk_kjmwajnyajmkhjyy0im1mmytymz4qtlidtol1sz_ylk2im.png" alt="Oxzy Community" /></div>
-            <div className="slider-item"><img src="https://res.cloudinary.com/dv1ignqxh/image/upload/v1774724141/WhatsApp_Image_2026-03-28_at_6.51.09_PM_1_y8h4yy.jpg" alt="Oxzy Building" /></div>
+            {/* Right Mission Card (Prototype Reference) */}
+            <div className="fade-up" style={{ 
+              background: "#0a0a0a", 
+              padding: "clamp(32px, 5vw, 64px)", 
+              borderRadius: "32px", 
+              color: "white",
+              boxShadow: "0 40px 80px rgba(0, 0, 0, 0.25)",
+              position: "relative",
+              overflow: "hidden"
+            }}>
+              {/* Refined Background Detail */}
+              <div style={{ 
+                position: "absolute", 
+                top: "-10%", 
+                right: "-10%", 
+                width: "40%", 
+                height: "40%", 
+                background: "radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%)",
+                zIndex: 1
+              }}></div>
+
+              <blockquote style={{ 
+                fontSize: "clamp(24px, 2.5vw, 30px)", 
+                lineHeight: 1.4, 
+                fontWeight: 300, 
+                marginBottom: "20px",
+                fontFamily: "var(--font-head)",
+                fontStyle: "italic",
+                position: "relative",
+                zIndex: 2
+              }}>
+                &quot;The future of Ghana will be shaped not by a few individuals, but by a collaborative ecosystem of builders, thinkers, and changemakers.&quot;
+              </blockquote>
+              
+              <cite style={{ 
+                display: "block", 
+                fontSize: "18px", 
+                fontStyle: "italic", 
+                opacity: 0.8, 
+                marginBottom: "48px",
+                position: "relative",
+                zIndex: 2
+              }}>
+                — Oxzy Mission
+              </cite>
+
+              <div style={{ 
+                display: "flex", 
+                flexDirection: "column", 
+                gap: "12px",
+                position: "relative",
+                zIndex: 2 
+              }}>
+                {[
+                  "Connect young entrepreneurs across Ghana",
+                  "Provide mentorship, knowledge & real networks",
+                  "Amplify youth voices in national conversations"
+                ].map((point, idx) => (
+                  <div key={idx} style={{ 
+                    background: "rgba(255, 255, 255, 0.08)", 
+                    padding: "16px 20px", 
+                    borderRadius: "16px",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "12px",
+                    fontSize: "15px",
+                    fontWeight: 500
+                  }}>
+                    <span style={{ 
+                      width: "6px", 
+                      height: "6px", 
+                      background: "var(--ghana-gold)", 
+                      borderRadius: "50%",
+                      flexShrink: 0
+                    }}></span>
+                    {point}
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -137,7 +245,7 @@ const Home = () => {
             gap: "clamp(12px, 2vw, 24px)"
           }}>
             <div className="focus-card fade-up">
-              <div className="focus-icon-wrap" style={{ color: "var(--ghana-green)" }}><Sprout size={24} /></div>
+              <div className="focus-icon-wrap" style={{ color: "var(--ghana-red)" }}><Sprout size={24} /></div>
               <h3 className="focus-title">Agriculture & Agribusiness</h3>
               <p className="focus-desc">Feeding Ghana while building wealth and sustainable food systems.</p>
             </div>
@@ -173,26 +281,18 @@ const Home = () => {
       {/* CTA */}
       <section className="section-cta" style={{ background: "var(--theme-bg)", color: "white", position: "relative", overflow: "hidden", minHeight: "60vh", display: "flex", alignItems: "stretch", padding: "0" }}>
         <div style={{ position: "absolute", top: "-100px", right: "-100px", width: "600px", height: "600px", borderRadius: "50%", background: "rgba(255,196,48,0.06)", filter: "blur(60px)" }}></div>
-        <div className="container grid-2" style={{ display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: "0", width: "100%", maxWidth: "100%", padding: "0" }}>
-          <div className="fade-up" style={{ padding: "80px 5% 80px 8%", position: "relative", zIndex: 1, display: "flex", flexDirection: "column", justifyContent: "center" }}>
-            <h2 style={{ fontFamily: "var(--font-head)", fontSize: "clamp(48px, 8vw, 76px)", fontWeight: 900, lineHeight: 1.0, letterSpacing: "-2px", marginBottom: "20px", color: "white", textAlign: "left" }}>
+        <div className="container" style={{ position: "relative", zIndex: 1, padding: "100px 24px", textAlign: "center" }}>
+          <div className="fade-up" style={{ maxWidth: "800px", margin: "0 auto" }}>
+            <h2 style={{ fontFamily: "var(--font-head)", fontSize: "clamp(48px, 8vw, 76px)", fontWeight: 900, lineHeight: 1.0, letterSpacing: "-2px", marginBottom: "20px", color: "white" }}>
               Ready to build<br /><em style={{ color: "var(--gold)", fontStyle: "italic" }}>Ghana&apos;s future?</em>
             </h2>
             <p style={{ fontSize: "20px", color: "rgba(255,255,255,0.7)", margin: "0 0 48px", lineHeight: 1.7 }}>
               Join thousands of young Ghanaians who are done waiting and have started building.
             </p>
-            <div style={{ display: "flex", gap: "20px", justifyContent: "flex-start", flexWrap: "wrap" }}>
+            <div style={{ display: "flex", gap: "20px", justifyContent: "center", flexWrap: "wrap" }}>
               <Link href="/club" className="btn btn-white" style={{ background: "white", color: "var(--theme-bg)", padding: "18px 40px", fontWeight: 700 }}>Join the Entrepreneurs Club <ArrowRight size={20} /></Link>
               <Link href="/summit" className="btn btn-outline" style={{ borderColor: "rgba(255,255,255,0.35)", color: "white", padding: "17px 36px" }}>Register for YES 2026</Link>
             </div>
-          </div>
-
-          <div className="cta-image-wrap fade-up" style={{ textAlign: "right", alignSelf: "stretch", height: "100%" }}>
-            <img 
-              src="https://res.cloudinary.com/dv1ignqxh/image/upload/v1774745886/Indpe_ebubq4.png" 
-              alt="Build Ghana" 
-              style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "50% 5%", filter: "brightness(0.9) contrast(1.1)", transform: "translateY(-10px)" }}
-            />
           </div>
         </div>
       </section>

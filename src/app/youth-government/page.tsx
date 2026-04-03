@@ -115,16 +115,14 @@ const YouthGovPage = () => {
             minHeight: 'auto',
             position: 'relative',
             overflow: 'hidden',
-            background:
-              'linear-gradient(135deg, var(--ghana-red) 0%, #8b1a1a 100%), url("https://www.transparenttextures.com/patterns/pinstriped-suit.png")',
+            background: '#000000',
             textAlign: 'left',
           }}
         >
           <div
             className="premium-hero__overlay"
             style={{
-              opacity: 0.1,
-              background: 'radial-gradient(circle at 10% 50%, rgba(255,255,255,0.1), transparent 50%)',
+              background: 'radial-gradient(circle at 10% 50%, rgba(255,255,255,0.03), transparent 100%)',
               zIndex: 2,
             }}
           ></div>
@@ -168,14 +166,14 @@ const YouthGovPage = () => {
                         alignItems: 'center',
                         gap: '10px',
                         color: 'white',
-                        background: 'var(--ghana-green)',
+                        background: 'var(--ghana-red)',
                         padding: '8px 20px',
                         borderRadius: '10px',
                         fontWeight: 800,
                         fontSize: '13px',
                         textDecoration: 'none',
                         transition: 'all 0.3s ease',
-                        boxShadow: '0 8px 20px rgba(13, 92, 51, 0.3)',
+                        boxShadow: '0 8px 20px rgba(214, 40, 40, 0.3)',
                         width: 'auto',
                       }}
                     >
@@ -184,16 +182,31 @@ const YouthGovPage = () => {
                   </div>
                 </div>
 
-                <div className="mobile-only mobile-hero-img-box" style={{ flexShrink: 0 }}>
+                {/* Desktop Hero Image (New Logo) */}
+                <div
+                  className="desktop-only fade-in-right"
+                  style={{
+                    position: 'absolute',
+                    right: '-45%',
+                    top: '20%',
+                    transform: 'translateY(-50%)',
+                    zIndex: 3,
+                    width: '45%',
+                    height: 'auto',
+                    display: 'flex',
+                    justifyContent: 'flex-end',
+                    alignItems: 'center',
+                  }}
+                >
                   <img
-                    src="https://res.cloudinary.com/dv1ignqxh/image/upload/v1774758641/GYG_moibel_r6pian.png"
-                    alt="GYG Mobile Visual"
+                    src="https://res.cloudinary.com/dv1ignqxh/image/upload/v1775144347/GYG_log_vbrdut.png"
+                    alt="GYG Visual"
                     style={{
-                      width: '230px',
+                      width: '100%',
                       height: 'auto',
+                      maxWidth: '600px',
                       objectFit: 'contain',
-                      filter: 'drop-shadow(0 15px 30px rgba(0,0,0,0.3))',
-                      marginLeft: '-15px',
+                      filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.25))',
                     }}
                   />
                 </div>
@@ -208,14 +221,14 @@ const YouthGovPage = () => {
                     alignItems: 'center',
                     gap: '12px',
                     color: 'white',
-                    background: 'var(--ghana-green)',
+                    background: 'var(--ghana-red)',
                     padding: '16px 32px',
                     borderRadius: '12px',
                     fontWeight: 800,
                     fontSize: '16px',
                     textDecoration: 'none',
                     transition: 'all 0.3s ease',
-                    boxShadow: '0 8px 20px rgba(13, 92, 51, 0.3)',
+                    boxShadow: '0 8px 20px rgba(214, 40, 40, 0.3)',
                   }}
                 >
                   Voice your opinion <ArrowRight size={20} />
@@ -252,93 +265,122 @@ const YouthGovPage = () => {
               </div>
             </div>
 
-            {/* Desktop Hero Image (Re-integrated) */}
-            <div
-              className="desktop-only fade-up"
-              style={{
-                position: 'absolute',
-                right: '-12%',
-                top: '-5%',
-                transform: 'translateY(-50%)',
-                zIndex: 3,
-                width: '50%',
-                height: '100%',
-                display: 'flex',
-                justifyContent: 'flex-end',
-                alignItems: 'center',
-              }}
-            >
-              <img
-                src="https://res.cloudinary.com/dv1ignqxh/image/upload/v1774749850/GYG_q5a8ft.png"
-                alt="GYG Visual"
-                style={{
-                  width: 'auto',
-                  height: 'auto',
-                  maxWidth: '100%',
-                  maxHeight: '95vh',
-                  objectFit: 'contain',
-                  transform: 'scale(1.15)',
-                  transformOrigin: 'right center',
-                }}
-              />
-            </div>
+
           </div>
         </section>
 
 
 
 
-        <section className="section" style={{ background: 'var(--theme-cream)', position: 'relative', zIndex: 4 }}>
-          <div className="container" style={{ textAlign: 'left' }}>
-            <div className="fade-up" style={{ textAlign: 'left', maxWidth: '700px', margin: '0 0 64px' }}>
-              <span className="section-tag" style={{ color: 'var(--ghana-green)' }}>
-                Our Core Mission
-              </span>
-              <h2 className="text-dark" style={{ textAlign: 'left' }}>
-                Empowering the next generation of leaders
+        {/* ── Ghana Youth Government Feature Section (Prototype Design) ── */}
+        <section className="section" style={{ background: 'var(--theme-cream)', position: 'relative', zIndex: 4, padding: '100px 0' }}>
+          <div className="container" style={{ textAlign: 'center' }}>
+            <div className="fade-up" style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 64px' }}>
+              <h2 className="text-dark" style={{
+                textAlign: 'center',
+                fontSize: 'clamp(40px, 6vw, 64px)',
+                fontWeight: 800,
+                lineHeight: 1.1,
+                marginBottom: '24px',
+                letterSpacing: '-0.03em'
+              }}>
+                Ghana Youth Government
               </h2>
+              <p style={{
+                color: 'var(--theme-text-muted-dark)',
+                fontSize: '20px',
+                maxWidth: '640px',
+                margin: '0 auto 40px',
+                lineHeight: 1.6
+              }}>
+                A visionary platform designed to empower young people to actively participate in leadership, governance, and national problem-solving. Launching at YES 2026.
+              </p>
+
+              <Link
+                href="#join"
+                className="btn"
+                style={{
+                  background: 'var(--ghana-red)',
+                  color: 'white',
+                  padding: '16px 40px',
+                  borderRadius: '100px',
+                  fontWeight: 600,
+                  fontSize: '18px',
+                  boxShadow: '0 10px 20px rgba(214, 40, 40, 0.2)'
+                }}
+              >
+                Learn More
+              </Link>
             </div>
 
             <div
-              className="about-split"
-              style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '32px' }}
+              className="feature-cards-grid"
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+                gap: '24px',
+                marginTop: '60px'
+              }}
             >
-              <div className="focus-card fade-up">
+              {[
+                {
+                  id: '01',
+                  title: 'Participate',
+                  desc: 'Contribute ideas, policy discussions, and innovative solutions to issues affecting your community and the nation.'
+                },
+                {
+                  id: '02',
+                  title: 'Lead',
+                  desc: 'Develop as a young leader prepared to engage constructively in civic life and public service.'
+                },
+                {
+                  id: '03',
+                  title: 'Build',
+                  desc: "Collaborate with peers to shape the conversations and decisions that determine Ghana's future."
+                }
+              ].map((card, i) => (
                 <div
-                  className="focus-icon-wrap"
-                  style={{ color: 'var(--ghana-red)', background: 'rgba(214,40,40,0.06)' }}
+                  key={i}
+                  className="fade-up"
+                  style={{
+                    background: 'white',
+                    padding: '60px 40px',
+                    borderRadius: '32px',
+                    textAlign: 'left',
+                    boxShadow: '0 20px 40px rgba(0,0,0,0.03)',
+                    border: '1px solid rgba(0,0,0,0.01)'
+                  }}
                 >
-                  <Trophy size={32} />
+                  <span style={{
+                    display: 'block',
+                    fontSize: '64px',
+                    fontWeight: 800,
+                    color: 'rgba(0,0,0,0.08)',
+                    marginBottom: '20px',
+                    fontFamily: 'var(--font-head)',
+                    lineHeight: 1
+                  }}>
+                    {card.id}
+                  </span>
+                  <h3 style={{
+                    fontSize: '32px',
+                    fontWeight: 800,
+                    color: 'var(--theme-bg)',
+                    marginBottom: '16px',
+                    letterSpacing: '-0.02em'
+                  }}>
+                    {card.title}
+                  </h3>
+                  <p style={{
+                    fontSize: '17px',
+                    color: 'var(--theme-text-muted-dark)',
+                    lineHeight: 1.6,
+                    margin: 0
+                  }}>
+                    {card.desc}
+                  </p>
                 </div>
-                <h3 className="focus-title text-dark">Develop Leadership</h3>
-                <p className="focus-desc">
-                  Providing young people with the tools and mindset needed to lead effectively in both civic and professional spaces.
-                </p>
-              </div>
-              <div className="focus-card fade-up">
-                <div
-                  className="focus-icon-wrap"
-                  style={{ color: 'var(--ghana-gold)', background: 'rgba(200,150,12,0.06)' }}
-                >
-                  <MessageCircle size={32} />
-                </div>
-                <h3 className="focus-title text-dark">Engage in Dialogue</h3>
-                <p className="focus-desc">
-                  Creating space for students, innovators, and leaders to engage in important civic discussions that shape national policy.
-                </p>
-              </div>
-              <div className="focus-card fade-up">
-                <div
-                  className="focus-icon-wrap"
-                  style={{ color: 'var(--ghana-green)', background: 'rgba(13,92,51,0.06)' }}
-                >
-                  <Lightbulb size={32} />
-                </div>
-                <h3 className="focus-title text-dark">Contribute Ideas</h3>
-                <p className="focus-desc">
-                  Encouraging young thinkers to propose practical solutions to societal challenges and turn vision into national impact.
-                </p>
-              </div>
+              ))}
             </div>
           </div>
         </section>
@@ -552,7 +594,7 @@ const YouthGovPage = () => {
                                 <span style={{ fontWeight: 700, fontSize: '13px', color: 'var(--theme-bg)' }}>
                                   Support
                                 </span>
-                                <span style={{ fontWeight: 800, color: '#16a34a' }}>
+                                <span style={{ fontWeight: 800, color: 'var(--ghana-gold)' }}>
                                   {poll.stats.for + (votedPolls[poll.id] === 'for' ? 1 : 0)}%
                                 </span>
                               </div>
@@ -566,7 +608,7 @@ const YouthGovPage = () => {
                               >
                                 <div
                                   className="result-bar"
-                                  style={{ width: `${poll.stats.for}%`, height: '100%', background: '#16a34a' }}
+                                  style={{ width: `${poll.stats.for}%`, height: '100%', background: 'var(--ghana-gold)' }}
                                 ></div>
                               </div>
                             </div>
@@ -870,6 +912,10 @@ const YouthGovPage = () => {
           animation: fadeIn 0.4s ease-out;
         }
 
+        .fade-in-right {
+          animation: fadeInRight 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
         @keyframes fadeIn {
           from {
             opacity: 0;
@@ -879,6 +925,22 @@ const YouthGovPage = () => {
             opacity: 1;
             transform: translateY(0);
           }
+        }
+
+        @keyframes fadeInRight {
+          from {
+            opacity: 0;
+            transform: translateX(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes slow-rotate {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
         }
 
         @media (max-width: 768px) {

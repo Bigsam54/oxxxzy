@@ -100,7 +100,7 @@ const AboutPage = () => {
           </div>
         </section>
 
-        <section className="section" id="about" style={{ paddingBottom: '0' }}>
+        <section className="section" id="about" style={{ paddingBottom: '80px' }}>
           <div className="container">
             <div className="fade-up" style={{ maxWidth: '840px', textAlign: 'left' }}>
               <span className="section-tag">About Oxzy</span>
@@ -131,47 +131,6 @@ const AboutPage = () => {
               </Link>
             </div>
           </div>
-
-          <div className="slider-container" style={{ marginTop: '40px', paddingBottom: '80px' }}>
-            <div className="slider-track" style={{ height: 'clamp(240px, 40vh, 480px)' }}>
-              <div className="slider-item">
-                <img
-                  src="https://res.cloudinary.com/dv1ignqxh/image/upload/v1774705866/Whisk_c2ac22b154dd98986b5420db3c9e45a1dr_fz230n.png"
-                  alt="Oxzy Event"
-                />
-              </div>
-              <div className="slider-item">
-                <img
-                  src="https://res.cloudinary.com/dv1ignqxh/image/upload/v1774723827/Whisk_kjmwajnyajmkhjyy0im1mmytymz4qtlidtol1sz_ylk2im.png"
-                  alt="Oxzy Community"
-                />
-              </div>
-              <div className="slider-item">
-                <img
-                  src="https://res.cloudinary.com/dv1ignqxh/image/upload/v1774724141/WhatsApp_Image_2026-03-28_at_6.51.09_PM_1_y8h4yy.jpg"
-                  alt="Oxzy Building"
-                />
-              </div>
-              <div className="slider-item">
-                <img
-                  src="https://res.cloudinary.com/dv1ignqxh/image/upload/v1774723833/Whisk_czyzmgm0gtmyctzk1czmzjyty2mkrtl2igmh1yy_fxxdgt.png"
-                  alt="Oxzy Event"
-                />
-              </div>
-              <div className="slider-item">
-                <img
-                  src="https://res.cloudinary.com/dv1ignqxh/image/upload/v1774723827/Whisk_kjmwajnyajmkhjyy0im1mmytymz4qtlidtol1sz_ylk2im.png"
-                  alt="Oxzy Community"
-                />
-              </div>
-              <div className="slider-item">
-                <img
-                  src="https://res.cloudinary.com/dv1ignqxh/image/upload/v1774724141/WhatsApp_Image_2026-03-28_at_6.51.09_PM_1_y8h4yy.jpg"
-                  alt="Oxzy Building"
-                />
-              </div>
-            </div>
-          </div>
         </section>
 
         <section className="section" style={{ background: 'white', paddingTop: '80px' }}>
@@ -194,7 +153,7 @@ const AboutPage = () => {
         <section className="section" style={{ background: 'var(--theme-cream)', padding: '100px 0' }}>
           <div className="container" style={{ maxWidth: '1100px' }}>
             <div className="fade-up" style={{ textAlign: 'left', marginBottom: '64px' }}>
-              <span className="section-tag" style={{ color: 'var(--ghana-green)' }}>
+              <span className="section-tag" style={{ color: 'var(--ghana-gold)' }}>
                 Our Leadership
               </span>
               <h2
@@ -208,46 +167,61 @@ const AboutPage = () => {
               </p>
             </div>
 
-            {/* CHAIRMAN OF THE BOARD */}
-            <div className="fade-up" style={{ marginBottom: '80px', textAlign: 'center' }}>
-              <h3 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--theme-bg)', marginBottom: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
-                <span style={{ width: '40px', height: '2px', background: 'var(--ghana-gold)' }}></span>
-                Chairman of the Board
-                <span style={{ width: '40px', height: '2px', background: 'var(--ghana-gold)' }}></span>
-              </h3>
-              <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <div className="team-card chairman-card" style={{ maxWidth: '320px', width: '100%', textAlign: 'center' }}>
-                  <div className="team-img-wrap chairman-img-wrap">
-                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face" alt="Moses Gawu" className="team-img" />
-                  </div>
-                  <h4 className="team-name" style={{ fontSize: '22px' }}>Moses Gawu</h4>
-                  <p className="team-role" style={{ color: 'var(--ghana-gold)' }}>Chairman of the board</p>
-                </div>
-              </div>
-            </div>
-
-            {/* EXECUTIVE LEADERSHIP */}
-            <div className="fade-up">
+            {/* ADMIN EXEC */}
+            <div className="fade-up" style={{ marginBottom: '80px' }}>
               <h3 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--theme-bg)', marginBottom: '32px', display: 'flex', alignItems: 'center', gap: '12px' }}>
-                <span style={{ width: '40px', height: '2px', background: 'var(--ghana-green)' }}></span>
-                Executive Leadership
+                <span style={{ width: '40px', height: '2px', background: 'var(--ghana-gold)' }}></span>
+                Administrative Executive
               </h3>
               <div className="team-grid">
                 {[
-                  { name: 'Casey Mills', role: 'Co Founder, President', img: 'https://images.unsplash.com/photo-1548142813-c348350df52b?w=400&h=400&fit=crop&crop=face' },
-                  { name: 'Kwabena O. Karikari', role: 'Co Founder, CEO', img: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face' },
-                  { name: 'Dennis Mensah', role: 'Vice President', img: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&crop=face' },
-                  { name: 'Andy Kwesi Apenteng', role: 'Chief Technology Officer', img: 'https://images.unsplash.com/photo-1531384441138-2736e62e0919?w=400&h=400&fit=crop&crop=face' },
-                  { name: 'Christopher Sam', role: 'Deputy Chief Technology Officer', img: 'https://images.unsplash.com/photo-1507152832244-10d45c7eda57?w=400&h=400&fit=crop&crop=face' },
-                  { name: 'Ebenezer Hammond', role: 'PRO', img: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face' },
-                  { name: 'Lydia Odame', role: 'Secretary', img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face' },
+                  { name: 'Casey Mills', role: 'Co Founder, President', img: 'https://res.cloudinary.com/dv1ignqxh/image/upload/v1775151625/cas_wzdhbc.png' },
+                  { name: 'Andy Kwesi Apenteng', role: 'Chief Technology Officer', img: 'https://res.cloudinary.com/dv1ignqxh/image/upload/v1775151953/cto_qgyqyi.png' },
+                  { name: 'Lydia Odame', role: 'Secretary', img: 'https://res.cloudinary.com/dv1ignqxh/image/upload/v1775151954/lydia_ssclwu.png' },
+                  { name: 'Moses Gawu', role: 'Chairman of the board', img: 'https://res.cloudinary.com/dv1ignqxh/image/upload/v1775151128/WhatsApp_Image_2026-04-02_at_5.25.17_PM_taxp1b.jpg' },
                 ].map((member, i) => (
-                  <div key={i} className="team-card">
-                    <div className="team-img-wrap">
+                  <div key={i} className="team-card" style={{
+                    background: 'white',
+                    padding: '24px',
+                    borderRadius: '32px',
+                    border: '1px solid rgba(0,0,0,0.06)',
+                    boxShadow: '0 20px 50px rgba(0,0,0,0.05)',
+                  }}>
+                    <div className="team-img-wrap" style={{ borderRadius: '24px', marginBottom: '24px' }}>
                       <img src={member.img} alt={member.name} className="team-img" />
                     </div>
-                    <h4 className="team-name">{member.name}</h4>
-                    <p className="team-role">{member.role}</p>
+                    <h4 className="team-name" style={{ fontSize: '20px', marginBottom: '6px' }}>{member.name}</h4>
+                    <p className="team-role" style={{ fontSize: '11px', color: 'var(--ghana-gold)' }}>{member.role}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* OPERATIONS EXEC */}
+            <div className="fade-up">
+              <h3 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--theme-bg)', marginBottom: '32px', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <span style={{ width: '40px', height: '2px', background: 'var(--ghana-red)' }}></span>
+                Operations Executive
+              </h3>
+              <div className="team-grid">
+                {[
+                  { name: 'Kwabena O. Karikari', role: 'Co Founder, CEO', img: 'https://res.cloudinary.com/dv1ignqxh/image/upload/v1775254034/kari_kmdb0q.png' },
+                  { name: 'Dennis K. Mensah', role: 'Vice President, Operations lead', img: 'https://res.cloudinary.com/dv1ignqxh/image/upload/v1775151092/ops_ankbil.png' },
+                  { name: 'Ebenezer Hammond', role: 'PRO', img: 'https://res.cloudinary.com/dv1ignqxh/image/upload/v1775254034/ebenm_dfk3x1.png' },
+                  { name: 'Christopher Sam', role: 'Deputy Chief Technology Officer', img: 'https://res.cloudinary.com/dv1ignqxh/image/upload/v1775151093/sam_r8iict.png' },
+                ].map((member, i) => (
+                  <div key={i} className="team-card" style={{
+                    background: 'white',
+                    padding: '24px',
+                    borderRadius: '32px',
+                    border: '1px solid rgba(0,0,0,0.06)',
+                    boxShadow: '0 20px 50px rgba(0,0,0,0.05)',
+                  }}>
+                    <div className="team-img-wrap" style={{ borderRadius: '24px', marginBottom: '24px' }}>
+                      <img src={member.img} alt={member.name} className="team-img" />
+                    </div>
+                    <h4 className="team-name" style={{ fontSize: '20px', marginBottom: '6px' }}>{member.name}</h4>
+                    <p className="team-role" style={{ fontSize: '11px', color: 'var(--ghana-red)' }}>{member.role}</p>
                   </div>
                 ))}
               </div>

@@ -26,8 +26,8 @@
   --theme-text-muted: rgba(255, 255, 255, 0.7); /* Muted for dark bg */
   --theme-text-muted-dark: rgba(17, 24, 16, 0.65); /* Muted for light bg */
 
-  --theme-border: rgba(13, 92, 51, 0.1);
-  --theme-shadow: 0 12px 40px rgba(13, 92, 51, 0.12);
+  --theme-border: rgba(0, 0, 0, 0.1);
+  --theme-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
 
   /* Legacy aliases */
   --red: var(--ghana-red);
@@ -133,7 +133,7 @@ select {
   font-weight: 500;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--ghana-green);
+  color: var(--ghana-gold);
   margin-bottom: 20px;
   display: inline-block;
 }

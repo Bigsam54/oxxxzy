@@ -82,15 +82,7 @@ const Footer = () => {
                     Entrepreneurs Club
                   </Link>
                 </li>
-                <li>
-                  <Link
-                    href="/world-young-leaders"
-                    style={{ fontSize: '15px', color: 'rgba(255,255,255,0.75)', transition: 'all 0.2s' }}
-                    className="footer-link"
-                  >
-                    World Young Leaders
-                  </Link>
-                </li>
+
                 <li>
                   <Link
                     href="/youth-government"

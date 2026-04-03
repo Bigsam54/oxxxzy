@@ -1,12 +1,12 @@
 "use client";
 
 import React from "react";
-import { 
-  Users, 
-  Trophy, 
-  Target, 
-  GraduationCap, 
-  Building2, 
+import {
+  Users,
+  Trophy,
+  Target,
+  GraduationCap,
+  Building2,
   ArrowRight,
   Mail,
   ShieldAlert,
@@ -21,7 +21,7 @@ const SocialProofPage = () => {
     <>
       <main>
         {/* IMPACT NUMBERS SECTOR - CLEAR BACKGROUND (NO OVERLAY) */}
-        <section className="impact-hero" style={{ 
+        <section className="impact-hero" style={{
           position: "relative",
           padding: "340px 0 80px", /* Increased top padding to move cards down */
           backgroundImage: `url(${heroImage})`,
@@ -34,11 +34,11 @@ const SocialProofPage = () => {
 
           <div className="container" style={{ position: "relative", zIndex: 2 }}>
             {/* LABEL REMOVED AS REQUESTED */}
-            
+
             <div className="impact-grid">
               <div className="impact-card">
                 <div className="impact-num">
-                   3<span style={{ color: "var(--ghana-gold)" }}>+</span>
+                  3<span style={{ color: "var(--ghana-gold)" }}>+</span>
                 </div>
                 <div className="impact-desc">
                   Annual summits<br />delivered
@@ -62,7 +62,7 @@ const SocialProofPage = () => {
               </div>
               <div className="impact-card">
                 <div className="impact-num">
-                  10<span style={{ color: "var(--ghana-gold)" }}>+</span>
+                  30<span style={{ color: "var(--ghana-gold)" }}>+</span>
                 </div>
                 <div className="impact-desc">
                   Expert speakers<br />& mentors
@@ -210,7 +210,7 @@ const SocialProofPage = () => {
                   </div>
                   <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", padding: "4px 10px", background: "var(--theme-bg)", color: "white", borderRadius: "100px" }}>Soon</div>
                 </div>
-                <h3 style={{ fontFamily: "var(--font-head)", fontSize: "20px", fontWeight: 700 }} className="text-dark">GYG Gov</h3>
+                <h3 style={{ fontFamily: "var(--font-head)", fontSize: "20px", fontWeight: 700 }} className="text-dark">Youth Gov</h3>
                 <p className="text-muted-dark" style={{ fontSize: "13px", lineHeight: 1.6 }}>Civic platform connecting leaders to governance and policy development.</p>
                 <div style={{ marginTop: "auto", paddingTop: "16px", borderTop: "1px solid rgba(51, 42, 81, 0.08)", display: "flex", alignItems: "center", gap: "8px", fontSize: "11px", color: "var(--theme-text-muted-dark)" }}>
                   <div style={{ width: "5px", height: "5px", borderRadius: "50%", background: "var(--ghana-gold)" }}></div>
